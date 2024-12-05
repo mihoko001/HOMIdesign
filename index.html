@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="https://use.typekit.net/tkf5msi.css">
     <link rel="stylesheet" href="https://use.typekit.net/kiq7dig.css">
     <link rel="stylesheet" href="https://use.typekit.net/kma7izx.css">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -31,12 +40,12 @@
         <div class="menubtn">
             <nav>
                 <div class="inner">
-                    <ul>
+                    <ul class="menu-title">
 
-                        <li><a href="#profile">PROFILE</a></li>
-                        <li><a href="#works">WORKS</a></li>
-                        <li><a href="#services">SERVICES</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="#profile"><span> (1) </span>PROFILE</a></li>
+                        <li><a href="#works">WORKS<span> (2) </span></a></li>
+                        <li><a href="#services"><span> (3) </span>SERVICES</a></li>
+                        <li><a href="#contact">CONTACT<span> (4) </span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -48,8 +57,9 @@
             </div>
 
             <div class="mask"></div>
+
+            <div class="header-right"></div>
         </div>
-        <div class="header-right"></div>
     </header>
 
     <!-- セクションtop -->
@@ -97,15 +107,114 @@
             </div>
             <!-- 右側 -->
             <div class="right-block">
-                <div class="sns-cta">
-                    <div class="sns-icon"><img src="images/1x/insta-logo.webp" alt="Instagram"><img
-                            src="images/1x/x-logo.webp" alt="Xロゴ"></div>
+
+                <div class="sns-icon1"><img src="images/1x/x-logo.webp" alt="Xロゴ"></div>
+
+                <div class="sns-icon2"><img src="images/1x/insta-logo.webp" alt="Instagram"></div>
+
+                <div class="sns-follow">
                     <p class="follow">FOLLOW ME</p>
                 </div>
             </div>
         </div>
 
+
     </section>
+
+
+    <!-- コンセプト -->
+    <section id="concept">
+        <div class="concept">
+            <div class="concept-flower">
+                <img src="images/1x/concept-flower.png" alt="コンセプト用ポピー">
+            </div>
+            <div class="concept-words">
+                <h3>DISC<span>O</span>VER Y<span>O</span>URSELF.</h3>
+                <p>花はそこにあるだけで美しいように、お客様のありのままの魅力を見出し、最大限に引き出すデザインを作ります。</p>
+                <div class="viewmore-btn">
+                    <p class="viewmore">VIEW PROFILE
+                    </p>
+                    <p class="yazirusi"></p>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="works">
+        <h2>W<span>O</span>RKS</h2>
+
+        <div class="works-container">
+            <ul>
+                <li><img src="images/1x/mockups_giyousitsu.webp" alt="美容室モックアップ">
+                    <div class="worksbox">
+                        <p class="number">01</p>
+                        <div class="title">
+                            <h4>LP</h4>
+                            <p class="detail">美容室　10周年記念リニューアルLP（架空）</p>
+                        </div>
+                    </div>
+                </li>
+                <li><img src="images/1x/mockups_designcafe.webp" alt="デザインカフェLP">
+                    <div class="worksbox">
+                        <p class="number">02</p>
+                        <div class="title">
+                            <h4>LP</h4>
+                            <p class="detail">コーヒーショップ　LP（架空）
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li><img src="images/1x/mockups_workers.webp" alt="コワーキングスペースLP">
+                    <div class="worksbox">
+                        <p class="number">03</p>
+                        <div class="title">
+                            <h4>LP</h4>
+                            <p class="detail">コワーキングスペース　LP（架空）
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <div class="viewmore-btn">
+            <p class="viewmore">VIEW PROFILE
+            </p>
+            <p class="yazirusi"></p>
+        </div>
+
+    </section>
+
+    <section id="services">
+        <div class="services-wrap">
+            <div class="img-left">
+                <img src="images/1x/services2.png" alt="サービス花左">
+            </div>
+            <div class="text">
+
+
+                <div class="title">
+                    <h3>SERVICES</h3>
+                </div>
+
+                <p class="services-detail">webサイトやバナーを中心に、各種デザインを制作いたします。HTML/CSS、Javascriptを使用したweb制作も可能です。
+                    デザインから実装まで、お客様のご要望に合わせて幅広く承っております。
+                </p>
+
+                <p class="tool">Tools : Photoshop / Illustrator / VScode / Studio / Figma</p>
+            </div>
+            <div class="img-right">
+                <img src="images/1x/services1.png" alt="サービス花右">
+            </div>
+
+        </div>
+    </section>
+
 </body>
 
 </html>

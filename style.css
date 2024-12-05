@@ -1,19 +1,24 @@
 @charset 'utf-8';
 /* ヘッダー */
 .header {
+    /* position: fixed; */
+
+    /* top: 70px; */
     background-color: #001900;
     height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: space-between;
+    align-items: center; */
 }
 .header h1 {
+    position: fixed;
     padding-left: 4%;
-    padding-top: 3px;
+    top: 16px;
     width: 60%;
 }
 .header-left,
 .header-right {
+    position: fixed;
     height: 100%;
     border-right: 1px solid #fff;
 }
@@ -24,30 +29,80 @@
 .header-right {
     margin-right: 3%;
 }
+
 .header nav {
     display: block;
     position: absolute;
     /* background-color: #001900; */
-
+    width: 560px;
     top: 0;
-    /* left: 0; */
+    left: -300px;
     bottom: 0;
     transition: all 0.5s;
     z-index: 3;
-    /* opacity: 0; */
+    opacity: 0;
 }
-nav .inner ul {
+nav .menu-title {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav .inner ul li {
+nav .menu-title li {
     margin: 0;
-    color: #fff;
-    border-bottom: 1px solid #fff;
+    color: black;
+    border-bottom: 1px solid #666666;
 }
 
+nav .menu-title li a {
+    display: block;
+    text-decoration: none;
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120px;
+}
+
+nav .menu-title span {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+}
+.toggle-btn {
+    display: block;
+    position: fixed;
+    top: 16px;
+    right: 58px;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.toggle-btn span {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 32px;
+    /* background-color: #001900; */
+    border-bottom: 6px dotted #fff;
+    /* background-image: linear-gradient(to right, #fff 80%, #001900 80%);
+    background-size: 10px 5px;
+    background-repeat: repeat-3;
+    background-position: center; */
+}
+
+.toggle-btn span:nth-child(1) {
+    top: 3px;
+}
+.toggle-btn span:nth-child(2) {
+    top: 16px;
+}
+.toggle-btn span:nth-child(3) {
+    top: 29px;
+}
 /* メインビジュアル */
 .main-container {
     width: 100%;
@@ -70,8 +125,11 @@ nav .inner ul li {
 }
 .right-block {
     border-left: 1px solid #001900;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-flow: column;
+    gap: 21px;
+    align-items: center;
+    justify-content: center;
 }
 .right-block p {
     font-family: "cormorant-garamond", serif;
@@ -81,9 +139,14 @@ nav .inner ul li {
     letter-spacing: 0.05em;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+    align-items: center;
 
     /* text-orientation: sideways; */
 }
+.right-block img {
+    width: 21px;
+}
+
 .left-block p {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 200;
@@ -140,4 +203,136 @@ nav .inner ul li {
     font-style: normal;
     font-size: 220px;
     letter-spacing: 0.03em;
+}
+
+/* コンセプト */
+
+.concept {
+    display: flex;
+}
+.concept-flower img {
+    width: 414px;
+}
+.concept-words h3 {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    letter-spacing: -0.045em;
+}
+
+.concept-words h3 span {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 80px;
+}
+.concept-words p {
+    font-size: 16px;
+}
+.viewmore {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    position: relative;
+}
+.yazirusi {
+    display: flex;
+}
+.yazirusi::after {
+    content: "";
+    width: 15px;
+    height: 3px;
+    border-bottom: solid 1px;
+    border-right: solid 1px;
+    transform: skew(45deg);
+}
+
+/* ワークス */
+
+#works {
+    background-color: #001900;
+}
+
+#works h2 {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 212px;
+    letter-spacing: -0.06em;
+    line-height: 0.7;
+    color: #fff;
+    padding: 12% 12%;
+}
+#works h2 span {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 212px;
+}
+#works h4 {
+    color: #fff;
+    font-family: "cormorant-garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+    margin: 20px 0 20px 0;
+}
+#works p {
+    color: #fff;
+}
+#works img {
+    max-width: 500px;
+}
+.works-container {
+    margin: 0 auto;
+}
+.worksbox {
+    display: flex;
+    width: 500px;
+}
+.number {
+    font-family: "ltc-nicholas-cochin-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120px;
+    letter-spacing: 0.03em;
+}
+.detail {
+    font-size: 16px;
+}
+
+/* サービス */
+#services {
+    background-color: #e6e8e6;
+}
+
+.services-wrap {
+    display: flex;
+}
+#services .text {
+    display: grid;
+    place-items: center;
+
+    width: 40%;
+}
+#services h3 {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    letter-spacing: -0.045em;
+    padding: 17% 17%;
+}
+
+#services p {
+    font-size: 16px;
+}
+.tool {
+    color: #4d5a4d;
+    padding: 27% 13%;
+}
+#services img {
+    width: 348px;
 }
