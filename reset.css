@@ -9,6 +9,8 @@ body,
 h1,
 h2,
 h3,
+h4,
+h5,
 p,
 dl,
 dt,
@@ -20,6 +22,7 @@ li {
     line-height: 1;
     /*デフォルトの文字色、font-familyを予め当てておく*/
     color: #001900;
+    font-size: 16px;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
@@ -41,3 +44,13 @@ img {
     vertical-align: bottom;
     border: none;
 }
+
+h4 {
+    margin: none;
+}
+/* p {
+    font-size: 1.17vw;
+}
+li {
+    font-size: 1.17vw;
+} */

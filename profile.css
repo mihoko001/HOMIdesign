@@ -1,0 +1,273 @@
+@charset 'utf-8';
+
+/* プロフィール */
+.prof h3 {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8vw;
+    letter-spacing: -0.06;
+    text-align: center;
+    padding: 12% 12%;
+}
+.prof img {
+    height: 24vw;
+}
+.prof-detail {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    padding-bottom: 21%;
+}
+.prof span {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 8vw;
+    letter-spacing: -0.06;
+}
+.prof-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 29vw;
+}
+.my-name {
+    font-size: 1.8vw;
+    padding-bottom: 5%;
+}
+.my-career {
+    line-height: 1.75;
+}
+
+/* スキル */
+
+#skills {
+    background-color: #e6e8e6;
+}
+.skill-title {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15vw;
+    letter-spacing: -0.06;
+    padding-top: 13vw;
+    position: relative;
+    left: 47vw;
+}
+
+.img-right img {
+    width: 47vw;
+    transform: rotate(10deg);
+    position: absolute;
+    right: -20vw;
+}
+
+.skill-wrap img {
+    width: 47vw;
+
+    transform: rotate(-10deg);
+    position: relative;
+    left: -20vw;
+    bottom: 46vw;
+}
+.skill-wrap {
+    width: 87vw;
+    height: 125vw;
+}
+
+.design-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -20vw;
+    top: 10vw;
+}
+
+.cording-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -20vw;
+    bottom: 10vw;
+}
+.circle1 {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 47vw;
+    height: 47vw;
+    text-align: center;
+    line-height: 1.75;
+    border-radius: 50%;
+    border: solid 3vw #c1c6c1;
+}
+.circle2 {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 47vw;
+    height: 47vw;
+    text-align: center;
+    line-height: 1.75;
+    border-radius: 50%;
+    border: solid 3vw #c1c6c1;
+}
+
+.design-detail {
+    width: 31vw;
+}
+.design-title {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6vw;
+    letter-spacing: -0.05;
+}
+
+.cording-title {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6vw;
+    letter-spacing: -0.05;
+}
+.design-tool {
+    color: #666666;
+    padding: 3vw 0 3vw 0;
+}
+
+.cording-tool {
+    color: #666666;
+    padding: 3vw 0 3vw 0;
+}
+.design-text {
+    width: 30vw;
+    display: block;
+    margin: 0 auto;
+}
+
+.cording-text {
+    width: 30vw;
+    display: block;
+    margin: 0 auto;
+}
+.design-more {
+    line-height: 1.75;
+    text-align: left;
+}
+.cording-more {
+    line-height: 1.75;
+    text-align: left;
+}
+/* .cording-wrap img {
+    width: 52vw;
+} */
+
+/* 強み */
+
+#strength {
+    background-color: #001900;
+}
+/* #strength p,
+#strength h3,
+#strength h4 {
+    color: #fff;
+} */
+
+.str-wrap {
+    padding: 12% 0 12% 0;
+}
+.str-title {
+    display: block;
+    text-align: center;
+}
+
+.str-title h3 {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8vw;
+    letter-spacing: -0.06;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 13%;
+}
+.str-jp {
+    color: #999c99;
+    padding-bottom: 1vw;
+}
+
+.str-menu {
+    width: 73vw;
+    margin: 0 auto;
+}
+
+.str-menu li {
+    padding-bottom: 6vw;
+}
+.plus {
+    margin-left: auto;
+}
+
+.str-menu li p,
+.str-menu li h4 {
+    color: #fff;
+    margin: none;
+}
+.str-detail {
+    display: flex;
+    justify-content: left;
+    border-bottom: #666666 1px solid;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+.str-number {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.171303074670571vw;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
+    padding: 0 1% 4% 3%;
+}
+.str-name {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6vw;
+    letter-spacing: -0.06;
+    text-align: center;
+}
+.str-wayaku {
+    padding-top: 3%;
+}
+.dli-plus {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    line-height: 1;
+    width: 2vw;
+    height: 0.1em;
+    background: currentColor;
+    border-radius: 0.1em;
+    position: relative;
+}
+
+.dli-plus::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    transform: rotate(90deg);
+}
