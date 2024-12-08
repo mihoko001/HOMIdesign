@@ -1,6 +1,9 @@
 @charset 'utf-8';
 
-#website h3 {
+.kakuu {
+    font-size: 12px;
+}
+#top h3 {
     font-family: "cormorant-garamond", serif;
     font-weight: 400;
     font-style: normal;
@@ -10,7 +13,7 @@
     padding: 12% 0 3% 0;
 }
 
-#website h3 span {
+#top h3 span {
     font-style: italic;
 }
 
@@ -40,10 +43,18 @@
     justify-content: center;
     padding: 4%;
 }
-.web-wrap {
+
+.border {
+    background-size: 6px 1px;
+    background-image: linear-gradient(to right, #4d4d4d 1px, transparent 1px);
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    padding-bottom: 2%;
+}
+.wrap {
     margin: 0 auto;
     width: 73vw;
-    padding: 5vw 0 5vw 0;
+    padding: 10% 0 6% 0;
 }
 .jenre h5 {
     font-family: "cormorant-garamond", serif;
@@ -54,12 +65,18 @@
 .jenre {
     padding-bottom: 2vw;
 }
-.web-container {
+.container {
     display: flex;
+    gap: 5%;
 }
-.web-box1 ul li {
-    padding: 2%;
+.box {
+    width: 30%;
 }
+
+.container ul li {
+    padding: 1vw 0 1vw 0;
+}
+
 .skill {
     color: #4d4d4d;
     font-size: 14px;
