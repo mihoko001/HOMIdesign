@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 476 475">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#drop-shadow-1);
+      }
+    </style>
+    <filter id="drop-shadow-1" x="0" y="0" width="476" height="475" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="15.41"/>
+      <feFlood flood-color="#000" flood-opacity=".2"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="works">
+    <image class="cls-1" width="1080" height="1080" transform="translate(46.45 46.11) scale(.35)" xlink:href="../../../デザスタ/デザイン/portfolio_miyoshi/portfolio_miyoshi_02/portfolio_miyoshi_pc_04/Links/kadai3_miyoshi_03_luxury.jpg"/>
+  </g>
+</svg>
