@@ -328,7 +328,7 @@ nav .menu-title span {
 
 .concept {
     display: flex;
-    height: 100vh;
+    height: 617px;
 }
 
 .concept-words {
@@ -341,11 +341,11 @@ nav .menu-title span {
 }
 .concept-flower {
     position: relative;
-    width: 414px;
 }
 .concept-flower img {
     position: absolute;
     bottom: -50px;
+    width: 40vw;
 }
 .concept-words h3 {
     font-family: "cormorant-garamond", serif;
