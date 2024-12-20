@@ -24,12 +24,14 @@
 }
 .skill {
     color: #4d4d4d;
+    padding-bottom: 1%;
 }
 .works-title {
     font-size: 1.688em;
 }
 .sub-span {
-    font-size: 1.25em;
+    font-size: 0.741em;
+    /* font-size: 14px; */
 }
 
 .title {
@@ -49,16 +51,16 @@
     padding-bottom: 2%;
 }
 
-table {
+.text-table {
     padding-top: 8%;
 }
-th {
+.text-table th {
     width: 15%;
     vertical-align: baseline;
     text-align: left;
     line-height: 1.75;
 }
-td {
+.text-table td {
     width: 85%;
 
     line-height: 1.75;
@@ -76,4 +78,29 @@ td {
 .sp {
     width: 15%;
     padding-top: 1%;
+}
+
+.prev-next img {
+    width: 10px;
+}
+.prev-next p {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+}
+
+.prev-next {
+    padding: 28% 0 15% 0;
+    gap: 20%;
+    justify-content: center;
+    display: flex;
+}
+.prev,
+.next {
+    display: flex;
+    align-items: baseline;
+    width: 90px;
+    gap: 30%;
 }

@@ -150,12 +150,14 @@
     width: 30vw;
     display: block;
     margin: 0 auto;
+    z-index: 99;
 }
 
 .cording-text {
     width: 30vw;
     display: block;
     margin: 0 auto;
+    z-index: 99;
 }
 .design-more {
     line-height: 1.75;
@@ -215,8 +217,8 @@
     margin-left: auto;
 }
 
-.str-menu li p,
-.str-menu li h4 {
+.str-detail p,
+.str-detail h4 {
     color: #fff;
     margin: none;
 }
@@ -270,4 +272,60 @@
     background: inherit;
     border-radius: inherit;
     transform: rotate(90deg);
+}
+
+/* --------- */
+
+#tsuyomi {
+    background-color: #001900;
+}
+
+.accordion {
+    max-width: 1000px;
+    margin-bottom: 1%;
+    border-bottom: #666666 1px solid;
+}
+
+.accordion summary {
+    position: relative;
+
+    cursor: pointer;
+}
+
+.strength-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 105px;
+}
+.strength-container p,
+.strength-container h4 {
+    color: #fff;
+}
+.number {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.171303074670571vw;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
+    padding: 0 1% 4% 3%;
+    align-self: flex-start;
+}
+.name {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6vw;
+    letter-spacing: -0.06;
+    text-align: center;
+    align-self: center;
+}
+
+.accordion-details {
+    transform: none;
+    opacity: 1;
+    color: #fff;
+    line-height: 1.75;
+    width: 1000px;
 }

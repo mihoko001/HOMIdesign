@@ -16,7 +16,9 @@ dl,
 dt,
 dd,
 ul,
-li {
+li,
+details,
+summary {
     margin: 0;
     padding: 0;
     line-height: 1;
