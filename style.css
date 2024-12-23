@@ -29,15 +29,29 @@ body {
     width: 1px; /*線の幅指定*/
     height: 60px; /*線の高さ指定*/
 }
-.header h1 {
+.logo-text {
+    color: #fff;
     position: fixed;
 
     left: 5%;
-    top: 12px;
+    top: 9px;
+
+    font-family: "cormorant-garamond", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 28px;
+    letter-spacing: -0.04em;
 }
-.header img {
-    width: 72px;
+
+.logo-text span {
+    font-size: 20px;
+    position: relative;
+    top: -12px;
 }
+
+/* ーーーーーーデモ用ナビーーーーーーー */
+
+/* ーーーーーー使う予定のナビーーーーーー */
 
 .header nav {
     display: block;
@@ -49,14 +63,18 @@ body {
     transition: all 0.5s;
     z-index: 3;
 }
+
+.menubtn {
+    background-color: #fff;
+}
+
 nav .menu-title {
     list-style: none;
-    margin: 0;
+
     padding: 0;
 }
 
 nav .menu-title li {
-    margin: 0;
     color: black;
     border-bottom: 1px solid #666666;
 }
@@ -124,7 +142,7 @@ nav .menu-title span {
     min-height: 100vh;
     position: relative;
 
-    z-index: 999;
+    z-index: 100;
 }
 
 .left-block {
@@ -211,6 +229,7 @@ nav .menu-title span {
     position: absolute;
     top: 11vw;
     left: 18vw;
+    z-index: 100;
 }
 .subtitle {
     position: absolute;
@@ -247,7 +266,7 @@ nav .menu-title span {
     width: 23vw;
     position: absolute;
     top: 20vw;
-    left: 49.12152269399707vw;
+    left: 46.12152269399707vw;
     z-index: 20;
 }
 .main h1 {
@@ -300,8 +319,8 @@ nav .menu-title span {
 .sub-menu {
     display: inline-block;
     position: absolute;
-    right: 20.937042459736457vw;
-    top: 24.15812591508053vw;
+    right: 21.937042459736457vw;
+    top: 32.15812591508053vw;
 }
 .sub-menu li {
     font-family: "neue-haas-grotesk-display", sans-serif;
@@ -317,7 +336,7 @@ nav .menu-title span {
     font-weight: 400;
     font-style: normal;
     font-size: 16.1vw;
-    letter-spacing: 0.03em;
+    letter-spacing: -0.03em;
     position: absolute;
     right: 20.937042459736457vw;
     top: 40.478770131771594vw;
@@ -334,18 +353,15 @@ nav .menu-title span {
 .concept-words {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-end;
     width: 53%;
-    padding-top: 15%;
-    padding-bottom: 15%;
 }
-.concept-flower {
-    position: relative;
-}
+
 .concept-flower img {
-    position: absolute;
-    bottom: -50px;
-    width: 40vw;
+    position: relative;
+    bottom: 150px;
+    height: 132%;
 }
 .concept-words h3 {
     font-family: "cormorant-garamond", serif;
@@ -364,23 +380,31 @@ nav .menu-title span {
 }
 .concept-text {
     padding: 11% 0 11% 0;
+    line-height: 1.75;
+    font-size: 16px;
     /* width: 60%; */
 }
 
-.concept-words p {
-    font-size: 16px;
-}
 .viewmore {
     font-family: "cormorant-garamond", serif;
     font-weight: 300;
     font-style: normal;
-    text-align: end;
+
+    font-size: 25px;
 }
 .viewmore-btn {
-    width: 78%;
-    border-bottom: solid 1px #999c99;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 207px;
+    gap: 25px;
 }
 
+.concept-border {
+    width: 78%;
+    border-bottom: solid 1px #999c99;
+    padding-top: 2%;
+}
 .yazirusi {
     display: flex;
 }
@@ -448,7 +472,27 @@ nav .menu-title span {
 .detail {
     font-size: 16px;
 }
+.works-btn {
+    position: relative;
+    left: 20px;
+    padding-top: 10%;
+    padding-bottom: 12%;
+    width: 50%;
+    margin: 0 auto;
+}
 
+.viewworks-btn {
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    display: flex;
+    justify-content: right;
+}
+
+.works-border {
+    border-bottom: solid 1px #999c99;
+    padding-top: 2%;
+}
 /* サービス */
 #services {
     background-color: #e6e8e6;
@@ -505,7 +549,7 @@ nav .menu-title span {
 
 .contact-wrap {
     display: flex;
-    padding: 3% 0 3% 0;
+    padding: 10% 0 10% 0;
     gap: 20px;
     place-items: center;
     flex-direction: column;
@@ -540,6 +584,7 @@ nav .menu-title span {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2000;
 }
 .menu-list {
     display: flex;
@@ -561,6 +606,7 @@ nav .menu-title span {
     background: #fff; /*線の色指定*/
     width: 1px; /*線の幅指定*/
     height: 60px; /*線の高さ指定*/
+    z-index: 9999;
 }
 
 .footer-right {
@@ -569,4 +615,20 @@ nav .menu-title span {
     background: #fff; /*線の色指定*/
     width: 1px; /*線の幅指定*/
     height: 60px; /*線の高さ指定*/
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #fff !important;
+}
+
+.slider-box {
+    opacity: 0.4;
+    transition: all 300ms ease;
+}
+
+.slider-box .slick-center {
+    color: #fff;
+    opacity: 1;
+    transform: scale(1.16);
 }

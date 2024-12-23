@@ -137,15 +137,14 @@
     font-size: 6vw;
     letter-spacing: -0.05;
 }
-.design-tool {
-    color: #666666;
-    padding: 3vw 0 3vw 0;
-}
-
+.design-tool,
 .cording-tool {
     color: #666666;
     padding: 3vw 0 3vw 0;
+    text-align: left;
+    line-height: 1.75;
 }
+
 .design-text {
     width: 30vw;
     display: block;
@@ -276,14 +275,15 @@
 
 /* --------- */
 
-#tsuyomi {
+#strength {
     background-color: #001900;
 }
 
 .accordion {
-    max-width: 1000px;
+    width: 73%;
     margin-bottom: 1%;
-    border-bottom: #666666 1px solid;
+
+    margin: 0 auto;
 }
 
 .accordion summary {
@@ -294,9 +294,15 @@
 
 .strength-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 105px;
+
+    /* justify-content: center;
+    align-items: center; */
+
+    border-bottom: #666666 1px solid;
+    padding-bottom: 1%;
+    position: relative;
+    cursor: pointer;
+    /* padding-top: 5%; */
 }
 .strength-container p,
 .strength-container h4 {
@@ -307,10 +313,12 @@
     font-weight: 200;
     font-style: normal;
     font-size: 1.171303074670571vw;
-    line-height: 1.5;
+    /* line-height: 1.5; */
     letter-spacing: 0.2em;
     padding: 0 1% 4% 3%;
     align-self: flex-start;
+    /* position: relative;
+    top: -40.95%; */
 }
 .name {
     font-family: "cormorant-garamond", serif;
@@ -319,13 +327,50 @@
     font-size: 6vw;
     letter-spacing: -0.06;
     text-align: center;
-    align-self: center;
+    align-self: baseline;
+    padding-right: 1%;
 }
 
+.wayaku {
+    align-self: baseline;
+}
+
+.plus {
+    position: relative;
+}
+.plus::before,
+.plus::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+
+    width: 2.7vw;
+    height: 0.1em;
+    background-color: #fff;
+    top: 50%;
+    left: -2.7vw;
+    transform: translateY(-50%);
+    transition: opacity 0.5s;
+}
+.plus::after {
+    transform: translateY(-50%) rotate(90deg);
+    transition: transform 0.5s;
+}
 .accordion-details {
     transform: none;
     opacity: 1;
     color: #fff;
     line-height: 1.75;
-    width: 1000px;
+    width: 84%;
+    margin: 0 auto;
+    padding-top: 3%;
+    padding-bottom: 10%;
+}
+
+.plus.show::before {
+    opacity: 0;
+}
+
+.plus.show::after {
+    transform: translateY(-50%) rotate(180deg);
 }

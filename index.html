@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOMI Design</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://use.typekit.net/kiq7dig.css">
@@ -13,17 +19,14 @@
     <link rel="stylesheet" href="https://use.typekit.net/kiq7dig.css">
     <link rel="stylesheet" href="https://use.typekit.net/kma7izx.css">
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="main.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
 </head>
-<script src="jquery.min.js"></script>
-<script src="midnight.jquery.min.js"></script>
+
 
 <body>
 
@@ -31,33 +34,56 @@
         <div class="header-wrap">
             <div class="left-border"></div>
             <div class="right-border"></div>
-            <h1>
-                <a href="#top"><img src="images/1x/logo.png" alt="ロゴ"></a>
-            </h1>
+            <div class="logo">
+                <a href="#top">
+                    <h2 class="logo-text">HOMI<br><span>Design</span></h2>
+                </a>
+            </div>
+
+
+            <div class="openbtn"><span></span><span></span><span></span></div>
+            <nav id="g-nav">
+                <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                    <ul>
+                        <li><a href="#">Top</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+
+
+
+
 
 
             <!-- <div class="menubtn">
-            <nav>
-                <div class="inner">
-                    <ul class="menu-title">
+                <nav>
+                    <div class="inner">
+                        <ul class="menu-title">
 
-                        <li><a href="#profile"><span> (1) </span>PROFILE</a></li>
-                        <li><a href="#works">WORKS<span> (2) </span></a></li>
-                        <li><a href="#services"><span> (3) </span>SERVICES</a></li>
-                        <li><a href="#contact">CONTACT<span> (4) </span></a></li>
-                    </ul>
+                            <li><a href="#profile"><span> (1) </span>PROFILE</a></li>
+                            <li><a href="#works">WORKS<span> (2) </span></a></li>
+                            <li><a href="#services"><span> (3) </span>SERVICES</a></li>
+                            <li><a href="#contact">CONTACT<span> (4) </span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="toggle-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </nav> -->
 
-            <div class="toggle-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <div class="mask"></div>
+                <div class="mask"></div>
 
 
+            </div> -->
         </div>
     </header>
 
@@ -68,6 +94,7 @@
             <!-- 左側 -->
             <div class="left-block">
                 <p class="scroll"> (SCROLL) </p>
+
             </div>
 
 
@@ -109,7 +136,7 @@
                         </nav>
                     </div>
                     <div class="since">
-                        <h1 class="since">'24</h1>
+                        <h1 class="since">‘24</h1>
                     </div>
                 </div>
 
@@ -138,13 +165,14 @@
 
     <!-- コンセプト -->
     <section id="concept">
+
         <div class="concept">
             <div class="concept-flower">
                 <img src="images/1x/concept-flower.png" alt="コンセプト用ポピー">
             </div>
             <div class="concept-words">
                 <h3>DISC<span>O</span>VER Y<span>O</span>URSELF.</h3>
-                <p class="concept-text">花はそこにあるだけで美しいように、お客様のありのままの魅力を見出し、最大限に引き出すデザインを作ります。</p>
+                <p class="concept-text">花はそこにあるだけで美しいように、お客様のありのままの<br>魅力を見出し、最大限に引き出すデザインを作ります。</p>
 
                 <div class="viewmore-btn">
                     <p class="viewmore">VIEW PROFILE
@@ -153,6 +181,7 @@
                     <p class="yazirusi"></p>
 
                 </div>
+                <span class="concept-border"></span>
             </div>
 
 
@@ -163,11 +192,20 @@
     </section>
 
     <section id="works">
+
+
         <h2>W<span>O</span>RKS</h2>
 
+
+
+
+
+
+
         <div class="works-container">
-            <ul>
-                <li><img src="images/1x/mockups_giyousitsu.webp" alt="美容室モックアップ">
+
+            <div class="works-slider">
+                <div class="slider-box"><img src="images/1x/mockups_giyousitsu.webp" alt="美容室モックアップ">
                     <div class="worksbox">
                         <p class="number">01</p>
                         <div class="title">
@@ -175,8 +213,8 @@
                             <p class="detail">美容室　10周年記念リニューアルLP（架空）</p>
                         </div>
                     </div>
-                </li>
-                <li><img src="images/1x/mockups_designcafe.webp" alt="デザインカフェLP">
+                </div>
+                <div class="slider-box"><img src="images/1x/mockups_designcafe.webp" alt="デザインカフェLP">
                     <div class="worksbox">
                         <p class="number">02</p>
                         <div class="title">
@@ -185,8 +223,8 @@
                             </p>
                         </div>
                     </div>
-                </li>
-                <li><img src="images/1x/mockups_workers.webp" alt="コワーキングスペースLP">
+                </div>
+                <div class="slider-box"><img src="images/1x/mockups_workers.webp" alt="コワーキングスペースLP">
                     <div class="worksbox">
                         <p class="number">03</p>
                         <div class="title">
@@ -195,16 +233,44 @@
                             </p>
                         </div>
                     </div>
-                </li>
-            </ul>
+                </div>
+                <div class="slider-box"><img src="images/1x/banner-hamburger.webp" alt="ハンバーガーバナー">
+                    <div class="worksbox">
+                        <p class="number">04</p>
+                        <div class="title">
+                            <h4>LP</h4>
+                            <p class="detail">コワーキングスペース　LP（架空）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-box"><img src="images/1x/banner-hamburger.webp" alt="ハンバーガーバナー">
+                    <div class="worksbox">
+                        <p class="number">04</p>
+                        <div class="title">
+                            <h4>LP</h4>
+                            <p class="detail">コワーキングスペース　LP（架空）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
 
         </div>
-        <div class="viewmore-btn">
-            <p class="viewmore">VIEW PROFILE
-            </p>
-            <p class="yazirusi"></p>
-        </div>
 
+        <div class="works-btn">
+            <div class="viewworks-btn">
+                <p class="viewmore">VIEW WORKS
+
+                </p>
+                <p class="yazirusi"></p>
+
+            </div>
+            <div class="works-border"></div>
+        </div>
     </section>
 
     <section id="services">
@@ -251,7 +317,7 @@
         <nav>
             <div class="footer-menu">
                 <ul class="menu-list">
-
+                    <li><a href="#top">HOME</a></li>
                     <li><a href="#profile">PROFILE</a></li>
                     <li><a href="#works">WORKS</a></li>
                     <li><a href="#services">SERVICES</a></li>
@@ -264,6 +330,60 @@
 
     </footer>
 
+
+
+    <script>
+
+
+        // $(".openbtn").click(function () {//ボタンがクリックされたら
+        //     $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+        //     $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+        // });
+
+        // $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+        //     $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
+        //     $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
+        // });
+
+
+        $('.works-slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+
+
+        $('.slick-center').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+
+    </script>
+
+
+    <script src="js/5-1-14.js"></script>
 
 </body>
 
