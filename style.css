@@ -62,7 +62,7 @@ body {
     right: -120%;
     width: 100%;
     height: 100vh; /*ナビの高さ*/
-    background: #999;
+    background: #001900;
     /*動き*/
     transition: all 0.6s;
 }
@@ -91,25 +91,53 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 73%;
 }
 
 /*リストのレイアウト設定*/
 
-#g-nav li {
-    list-style: none;
-    text-align: center;
+#g-nav ul li .area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+#g-nav ul li:nth-child(even) .area {
+    flex-direction: row-reverse;
+}
 #g-nav li a {
-    color: #333;
     text-decoration: none;
     padding: 10px;
     display: block;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: -0.04em;
     font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #666666;
+
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120px;
 }
 
+#g-nav .nav-number {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    position: relative;
+    bottom: 65px;
+    padding: 1%;
+}
+#g-nav .italic {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 120px;
+    letter-spacing: -0.04em;
+}
 /*========= ボタンのためのCSS ===============*/
 .openbtn {
     position: fixed;
@@ -170,43 +198,12 @@ body {
     /* position: absolute; */
     width: 560px;
     top: 0;
-    left: -300px;
+
     bottom: 0;
     transition: all 0.5s;
     z-index: 3;
 }
 
-.menubtn {
-    background-color: #fff;
-}
-
-nav .menu-title {
-    list-style: none;
-
-    padding: 0;
-}
-
-nav .menu-title li {
-    color: black;
-    border-bottom: 1px solid #666666;
-}
-
-nav .menu-title li a {
-    display: block;
-    text-decoration: none;
-    font-family: "cormorant-garamond", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 120px;
-}
-
-nav .menu-title span {
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 16px;
-    letter-spacing: 0.2em;
-}
 .toggle-btn {
     display: block;
     position: fixed;
@@ -294,7 +291,7 @@ nav .menu-title span {
 }
 
 .right-block img {
-    width: 21px;
+    width: 23%;
 }
 .back-to {
     display: flex;
@@ -326,6 +323,44 @@ nav .menu-title span {
     font-size: 12px;
     letter-spacing: 0.2em;
 }
+
+/* midnight */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body,
+section {
+    width: 100%;
+    height: 100%;
+}
+#fixed-text,
+.midnightInner {
+    height: 100%;
+}
+.midnightInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*スクロールした時に色、フォントが変わる start*/
+.blue {
+    color: #222;
+    background: #79dae8;
+}
+.black {
+    color: #fff;
+    background: #222;
+}
+.white {
+    color: #000;
+    background: #fff;
+    font-family: "Lato", "NotoSansB", sans-serif; /*フォント変更*/
+}
+/*スクロールした時に色、フォントが変わる end*/
+
 /* メインビジュアル */
 
 #main {
@@ -334,72 +369,61 @@ nav .menu-title span {
 .main {
     width: 100%;
     height: 100vh;
-    position: relative;
 }
+.main-wrap {
+    width: 63%;
+    aspect-ratio: 1 / 0.7;
+    position: relative;
 
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+}
+.F {
+    padding-left: 5%;
+    font-style: normal;
+}
 .main-title {
     position: absolute;
-    top: 11vw;
-    left: 18vw;
+
     z-index: 100;
 }
+
 .subtitle {
     position: absolute;
-    top: 34vw;
-    left: 30vw;
+    bottom: 20%;
+    left: 14%;
 }
 
 .homi-is {
     position: absolute;
-    top: 48vw;
-    left: 21vw;
+    bottom: 8%;
+    left: 4%;
 }
 
-/* .main-leftblock {
-    position: absolute;
-    top: 88px;
-    left: 18%;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    transform: translate(-35%); */
-/* } */
-/* .main-rightblock {
-    position: absolute;
-    right: 21%;
-    top: 333px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: flex-end; */
-/* align-items: flex-start; */
-/* } */
-/* */
 .main-flower {
-    width: 23vw;
     position: absolute;
-    top: 20vw;
-    left: 46.12152269399707vw;
+    width: 22vw;
+
     z-index: 20;
+    right: 11vw;
+    bottom: 0;
 }
 .main h1 {
     font-family: "cormorant-garamond", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 14.4vw;
+    font-size: 14vw;
     letter-spacing: -0.06em;
     line-height: 0.7;
     z-index: 30;
 }
-/* .main-title {
-    position: absolute;
-    top: 13%;
-    left: 18%;
-} */
-.main h1 span {
+
+.main h1 .O {
     font-family: "cormorant-garamond", serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 14.4vw;
+
     z-index: 30;
 }
 
@@ -407,38 +431,33 @@ nav .menu-title span {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 5.86vw;
+    /* font-size: 5rem; */
+
+    font-size: 6vw;
     line-height: 0.98;
     letter-spacing: 0.1em;
 }
-/* .subtitle {
-    position: absolute;
-    top: 55%;
-    left: 30%;
-} */
+
 .message p {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 0.8784773060029283vw;
+    font-size: 0.9vw;
     line-height: 1.5;
     letter-spacing: 0.2em;
-    /* position: absolute;
-    bottom: 14%;
-    left: 20%; */
 }
 
 .sub-menu {
-    display: inline-block;
     position: absolute;
-    right: 21.937042459736457vw;
-    top: 32.15812591508053vw;
+    display: inline-block;
+    right: 0;
+    bottom: 37%;
 }
 .sub-menu li {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 1.171303074670571vw;
+    font-size: 1.2vw;
     line-height: 1.5;
     letter-spacing: 0.2em;
     text-align: left;
@@ -447,11 +466,11 @@ nav .menu-title span {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 16.1vw;
+    font-size: 16vw;
     letter-spacing: -0.03em;
     position: absolute;
-    right: 20.937042459736457vw;
-    top: 40.478770131771594vw;
+    bottom: 8%;
+    right: 0;
     z-index: 3;
 }
 
@@ -564,9 +583,7 @@ nav .menu-title span {
 #works p {
     color: #fff;
 }
-#works img {
-    max-width: 500px;
-}
+
 .works-container {
     margin: 0 auto;
 }
@@ -578,11 +595,16 @@ nav .menu-title span {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 120px;
+    font-size: 100px;
     letter-spacing: 0.03em;
+    padding-right: 2%;
 }
 .detail {
     font-size: 16px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .works-btn {
     position: relative;
@@ -696,7 +718,7 @@ nav .menu-title span {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2000;
+    z-index: 100;
 }
 .menu-list {
     display: flex;
@@ -734,6 +756,9 @@ nav .menu-title span {
     color: #fff !important;
 }
 
+.works-slider {
+    margin: 0 auto;
+}
 .slider-box {
     opacity: 0.4;
     transition: all 300ms ease;

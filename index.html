@@ -23,6 +23,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+    <script src="midnight.jquery.min.js"></script>
 
 
 </head>
@@ -41,16 +42,34 @@
             </div>
 
 
-            <div class="openbtn"><span></span><span></span><span></span></div>
+            <div class="openbtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <nav id="g-nav">
-                <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
-                    <ul>
-                        <li><a href="#">Top</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
+
+                <ul>
+                    <li>
+                        <div class="area"><a href="#profile"><span class="nav-number"> (1) </span>PR<span
+                                    class="italic">O</span>FILE</a></div>
+                    </li>
+                    <li>
+                        <div class="area"><a href="#works">W<span class="italic">O</span>RKS<span class="nav-number">
+                                    (2) </span> </a></div>
+                    </li>
+                    <li>
+                        <div class="area"><a href="#services"><span class="nav-number"> (3) </span>SERVICES</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="area"><a href="#contact">C<span class="italic">O</span>NTACT<span
+                                    class="nav-number"> (4)
+                                </span></a></div>
+                    </li>
+                </ul>
+
             </nav>
 
 
@@ -61,29 +80,21 @@
 
 
 
-            <!-- <div class="menubtn">
+            <div class="menubtn">
                 <nav>
                     <div class="inner">
                         <ul class="menu-title">
 
-                            <li><a href="#profile"><span> (1) </span>PROFILE</a></li>
-                            <li><a href="#works">WORKS<span> (2) </span></a></li>
-                            <li><a href="#services"><span> (3) </span>SERVICES</a></li>
-                            <li><a href="#contact">CONTACT<span> (4) </span></a></li>
+
                         </ul>
                     </div>
                 </nav>
 
-                <div class="toggle-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
 
                 <div class="mask"></div>
 
 
-            </div> -->
+            </div>
         </div>
     </header>
 
@@ -99,44 +110,48 @@
 
 
 
+
             <!-- メインビジュアル -->
             <div class="main">
-                <div class="main-leftblock">
-                    <div class="main-title">
-                        <h1>P<span>O</span>RT<br>F<span>O</span>LI<span>O</span></h1>
+                <div class="main-wrap">
+                    <div class="main-leftblock">
+                        <div class="main-title">
+                            <h1>P<span class="O">O</span>RT<br> <span class="F">F</span><span class="O">O</span>LI<span
+                                    class="O">O</span></h1>
+                        </div>
+
+                        <div class="subtitle">
+                            <h2>HOMI<br>Design</h2>
+                        </div>
+
+
+
+
+                        <div class="message">
+                            <p class="homi-is">HOMI Design IS A WEB DESIGNER THAT BRING OUT<br>
+                                YOUR STRENGTHS WITH THE POWER OF DESIGN</p>
+                        </div>
+                    </div>
+                    <div class="main-flower">
+                        <img src="images/2x/main-flower@2x.png" alt="メインビジュアル用">
                     </div>
 
-                    <div class="subtitle">
-                        <h2>HOMI<br>Design</h2>
-                    </div>
+                    <div class="main-rightblock">
 
 
-
-
-                    <div class="message">
-                        <p class="homi-is">HOMI Design IS A WEB DESIGNER THAT BRING OUT<br>
-                            YOUR STRENGTHS WITH THE POWER OF DESIGN</p>
-                    </div>
-                </div>
-                <div class="main-flower">
-                    <img src="images/1x/main-flower.png" alt="メインビジュアル用">
-                </div>
-
-                <div class="main-rightblock">
-
-
-                    <div class="sub-menu">
-                        <nav>
-                            <ul>
-                                <li><a href="#profile">PROFILE</a></li>
-                                <li><a href="#works">WORKS</a></li>
-                                <li><a href="#services">SERVICES</a></li>
-                                <li><a href="#contact">CONTACT</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="since">
-                        <h1 class="since">‘24</h1>
+                        <div class="sub-menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="#profile">PROFILE</a></li>
+                                    <li><a href="#works">WORKS</a></li>
+                                    <li><a href="#services">SERVICES</a></li>
+                                    <li><a href="#contact">CONTACT</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="since">
+                            <h1 class="since">‘24</h1>
+                        </div>
                     </div>
                 </div>
 
@@ -160,6 +175,16 @@
         </div>
 
 
+    </section>
+
+
+    <section id="midnight">
+        <div id="fixed-text">
+            <p>Sampleさんぷるサンプル</p>
+        </div>
+        <section data-midnight="blue"></section>/*背景青 文字黒*/
+        <section data-midnight="black"></section>/*背景黒 文字白*/
+        <section data-midnight="white"></section>/*背景白 文字黒*/
     </section>
 
 
@@ -227,6 +252,16 @@
                 <div class="slider-box"><img src="images/1x/mockups_workers.webp" alt="コワーキングスペースLP">
                     <div class="worksbox">
                         <p class="number">03</p>
+                        <div class="title">
+                            <h4>LP</h4>
+                            <p class="detail">コワーキングスペース　LP（架空）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-box"><img src="images/1x/banner-hamburger.webp" alt="ハンバーガーバナー">
+                    <div class="worksbox">
+                        <p class="number">04</p>
                         <div class="title">
                             <h4>LP</h4>
                             <p class="detail">コワーキングスペース　LP（架空）
@@ -335,6 +370,11 @@
     <script>
 
 
+        $(function () {
+            $('#fixed-text').midnight();
+        });
+
+
         $(".openbtn").click(function () {//ボタンがクリックされたら
             $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
             $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
@@ -350,8 +390,10 @@
 
         $('.works-slider').slick({
             centerMode: true,
-            centerPadding: '60px',
+            centerPadding: '20px',
             slidesToShow: 3,
+            // autoplay: true,
+            // autoplaySpeed: 3000,
             responsive: [
                 {
                     breakpoint: 768,
