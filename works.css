@@ -3,6 +3,9 @@
 .kakuu {
     font-size: 12px;
 }
+#top {
+    margin: 0 auto;
+}
 #top h3 {
     font-family: "cormorant-garamond", serif;
     font-weight: 400;
@@ -26,7 +29,37 @@
     border: solid 1px #cccecc;
     border-radius: 50px;
 }
+.gnavi li a {
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+}
 
+.gnavi li.current a,
+.gnavi li a:hover {
+    color: #001900;
+}
+
+.gnavi li a::after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    /*線の形状*/
+    width: 90%;
+    height: 1px;
+    background: #001900;
+    /*アニメーションの指定*/
+    transition: all 0.3s;
+    transform: scale(0, 1); /*X方向0、Y方向1*/
+    transform-origin: left top; /*左上基点*/
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+    transform: scale(1, 1); /*X方向にスケール拡大*/
+}
 .filter ul li {
     font-family: "cormorant-garamond", serif;
     font-weight: 400;
@@ -54,6 +87,35 @@
     background-position: left bottom;
     padding-bottom: 2%;
 }
+
+/*　画像の拡大＋テキスト出現　*/
+
+.zoomInText span.mask {
+    position: relative;
+    transition: 0.3s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+    display: block; /*画像をくくるspanタグをブロック要素にする*/
+    line-height: 0; /*行の高さを0にする*/
+    overflow: hidden; /*拡大してはみ出る要素を隠す*/
+}
+
+.zoomInText:hover span.mask::before {
+    /*hoverした時の変化*/
+    content: "";
+    position: absolute;
+    z-index: 2;
+}
+
+.zoomInText img {
+    transform: scale(1);
+    filter: blur(0);
+    transition: 0.3s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoomInText:hover img {
+    /*hoverした時の変化*/
+    transform: scale(1.08); /*拡大の値を変更したい場合はこの数値を変更*/
+}
+
 .wrap {
     margin: 0 auto;
     width: 73vw;
@@ -91,4 +153,50 @@
 .skill {
     color: #4d4d4d;
     font-size: 0.875rem;
+}
+
+#Banner {
+    padding-bottom: 20%;
+}
+/* フッター */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #001900;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.menu-list {
+    display: flex;
+
+    gap: 47px;
+}
+.footer-menu ul li {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: #fff;
+}
+
+.footer-left {
+    position: fixed;
+    left: 3%; /*横位置の指定*/
+    background: #fff; /*線の色指定*/
+    width: 1px; /*線の幅指定*/
+    height: 60px; /*線の高さ指定*/
+    z-index: 9999;
+}
+
+.footer-right {
+    position: fixed;
+    right: 3%; /*横位置の指定*/
+    background: #fff; /*線の色指定*/
+    width: 1px; /*線の幅指定*/
+    height: 60px; /*線の高さ指定*/
 }

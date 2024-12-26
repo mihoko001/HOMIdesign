@@ -23,15 +23,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="midnight.jquery.min.js"></script>
+    <script src="./midnight.js-gh-pages/midnight.jquery.min.js"></script>
 
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
 
 </head>
 
 
 <body>
+    <!-- デモ用 -->
+
+
+
+
+
+    <div id="loading-page">
+        <div id="loading"></div>
+    </div>
+    <div class="splashbg"></div>
+    <!---画面遷移用-->
 
     <header class="header">
+
+
         <div class="header-wrap">
             <div class="left-border"></div>
             <div class="right-border"></div>
@@ -52,11 +66,12 @@
 
                 <ul>
                     <li>
-                        <div class="area"><a href="#profile"><span class="nav-number"> (1) </span>PR<span
+                        <div class="area"><a href="profile.html"><span class="nav-number"> (1) </span>PR<span
                                     class="italic">O</span>FILE</a></div>
                     </li>
                     <li>
-                        <div class="area"><a href="#works">W<span class="italic">O</span>RKS<span class="nav-number">
+                        <div class="area"><a href="works.html">W<span class="italic">O</span>RKS<span
+                                    class="nav-number">
                                     (2) </span> </a></div>
                     </li>
                     <li>
@@ -116,8 +131,11 @@
                 <div class="main-wrap">
                     <div class="main-leftblock">
                         <div class="main-title">
-                            <h1>P<span class="O">O</span>RT<br> <span class="F">F</span><span class="O">O</span>LI<span
-                                    class="O">O</span></h1>
+
+                            <h1><span class="smoothText"><span class="smoothTextTrigger"></span>P<span
+                                        class="O">O</span>RT<br> <span class="F">F</span><span class="O">O</span>LI<span
+                                        class="O">O</span></span></h1>
+
                         </div>
 
                         <div class="subtitle">
@@ -169,7 +187,7 @@
                 </div>
                 <div class="back-to">
                     <span class="back-yazirusi"></span>
-                    <p class="back">BACK TO TOP</p>
+                    <p class="back"><a href="#top">BACK TO TOP</a></p>
                 </div>
             </div>
         </div>
@@ -178,14 +196,14 @@
     </section>
 
 
-    <section id="midnight">
+    <!-- <section id="midnight">
         <div id="fixed-text">
             <p>Sampleさんぷるサンプル</p>
         </div>
         <section data-midnight="blue"></section>/*背景青 文字黒*/
         <section data-midnight="black"></section>/*背景黒 文字白*/
         <section data-midnight="white"></section>/*背景白 文字黒*/
-    </section>
+    </section> -->
 
 
     <!-- コンセプト -->
@@ -199,13 +217,16 @@
                 <h3>DISC<span>O</span>VER Y<span>O</span>URSELF.</h3>
                 <p class="concept-text">花はそこにあるだけで美しいように、お客様のありのままの<br>魅力を見出し、最大限に引き出すデザインを作ります。</p>
 
-                <div class="viewmore-btn">
-                    <p class="viewmore">VIEW PROFILE
+                <a href="profile.html">
+                    <div class="viewmore-btn">
 
-                    </p>
-                    <p class="yazirusi"></p>
+                        <p class="viewmore">VIEW PROFILE
 
-                </div>
+                        </p>
+                        <p class="yazirusi"></p>
+
+                    </div>
+                </a>
                 <span class="concept-border"></span>
             </div>
 
@@ -216,8 +237,7 @@
 
     </section>
 
-    <section id="works">
-
+    <section id="works" data-midnight="black">
 
         <h2>W<span>O</span>RKS</h2>
 
@@ -296,15 +316,16 @@
 
         </div>
 
-        <div class="works-btn">
-            <div class="viewworks-btn">
-                <p class="viewmore">VIEW WORKS
+        <div class="works-btn"><a href="works.html">
+                <div class="viewworks-btn">
+                    <p class="viewmore">VIEW WORKS
 
-                </p>
-                <p class="yazirusi"></p>
+                    </p>
+                    <p class="yazirusi"></p>
 
-            </div>
-            <div class="works-border"></div>
+                </div>
+                <div class="works-border"></div>
+            </a>
         </div>
     </section>
 
@@ -353,8 +374,8 @@
             <div class="footer-menu">
                 <ul class="menu-list">
                     <li><a href="#top">HOME</a></li>
-                    <li><a href="#profile">PROFILE</a></li>
-                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                    <li><a href="works.html">WORKS</a></li>
                     <li><a href="#services">SERVICES</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
@@ -368,11 +389,24 @@
 
 
     <script>
-
-
-        $(function () {
-            $('#fixed-text').midnight();
+        $('a[href*="#"]').click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
+            var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+            var pos = $(elmHash).offset().top;	//idの上部の距離を取得
+            $('body,html').animate({ scrollTop: pos }, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+            return false;
         });
+
+        // #page-topをクリックした際の設定
+        $('.back').click(function () {
+            $('body,html').animate({
+                scrollTop: 0//ページトップまでスクロール
+            }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
+            return false;//リンク自体の無効化
+        });
+
+        // $(function () {
+        //     $('.left-block').midnight();
+        // });
 
 
         $(".openbtn").click(function () {//ボタンがクリックされたら
@@ -386,7 +420,31 @@
         });
 
 
+        // smoothTriggerにsmoothTextAppearというクラス名を付ける定義
+        function SmoothTextAnime() {
+            $('.smoothTextTrigger').each(function () { //smoothTextTriggerというクラス名が
+                var elemPos = $(this).offset().top - 50;//要素より、50px上の
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass('smoothTextAppear');// 画面内に入ったらsmoothTextAppearというクラス名を追記
+                } else {
+                    $(this).removeClass('smoothTextAppear');// 画面外に出たらsmoothTextAppearというクラス名を外す
+                }
+            });
+        }
 
+
+
+        // 画面をスクロールをしたら動かしたい場合の記述
+        $(window).scroll(function () {
+            SmoothTextAnime();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+        // 画面が読み込まれたらすぐに動かしたい場合の記述
+        $(window).on('load', function () {
+            SmoothTextAnime();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
         $('.works-slider').slick({
             centerMode: true,
@@ -416,6 +474,52 @@
             ]
         });
 
+
+
+        var bar = new ProgressBar.Circle(loading, {
+            color: '#fff',
+            // This has to be the same size as the maximum width to
+            // prevent clipping
+            strokeWidth: 1,
+            trailWidth: 0,
+            easing: 'easeInOut',
+            duration: 1900,
+            text: {
+                autoStyleContainer: false
+            },
+            from: { color: '#fff', width: 0.5 },
+            to: { color: '#fff', width: 0.5 },
+            // Set default step function for all animate calls
+            step: function (state, circle) {
+                circle.path.setAttribute('stroke', state.color);
+                circle.path.setAttribute('stroke-width', state.width);
+
+                var value = Math.round(circle.value() * 100) + ' %';
+                if (value === 0) {
+                    circle.setText('');
+                } else {
+                    circle.setText(value);
+                }
+
+            }
+
+        });
+        bar.text.style.fontFamily = '"cormorant-garamond", serif';
+        bar.text.style.fontSize = '1.2rem';
+
+        bar.animate(1.0);
+
+        $(window).on('load', function () {
+            $("#loading-page").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+                $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+                var h = $(window).height();//ブラウザの高さを取得
+                $(".splashbg").css({
+                    "border-width": h,//ボーダーの太さにブラウザの高さを代入
+                    "animation-name": "backBoxAnime"//animation-nameを定義
+                });
+            });
+            $("loading").delay(2000).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
+        });
 
     </script>
 

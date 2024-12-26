@@ -1,8 +1,89 @@
 @charset 'utf-8';
 
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: #001900;
+    text-align: center;
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+
+/*========= ローディング画面のためのCSS ===============*/
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+
 body {
-    margin-bottom: 60px;
-    margin-top: 60px;
+    background: #001900; /*遷移アニメーションと同じ色を指定*/
+}
+
+body.appear {
+    background: #e5e8e5; /*画面を開いた後の背景色を指定*/
+}
+
+.splashbg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-width: 0px; /*開始はボーダーの太さは0*/
+    border-style: solid;
+
+    border-color: #001900; /*拡大する四角の色*/
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backBoxAnime {
+    99.9% {
+        /*アニメーション終了ぎりぎりまで*/
+        z-index: 2; /*最前面に*/
+        border-width: 0px; /*開始はボーダーの太さは0*/
+    }
+    100% {
+        z-index: -1; /*最背面に*/
+        border-width: 0px; /*終了はボーダーの太さは0*/
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#top {
+    position: relative;
+    opacity: 0; /*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #top {
+    animation-name: PageAnimeAppear;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 /* ヘッダー */
 .header-wrap {
@@ -290,9 +371,6 @@ body {
     /* text-orientation: sideways; */
 }
 
-.right-block img {
-    width: 23%;
-}
 .back-to {
     display: flex;
     flex-flow: column;
@@ -325,7 +403,7 @@ body {
 }
 
 /* midnight */
-
+/* 
 * {
     margin: 0;
     padding: 0;
@@ -336,30 +414,8 @@ section {
     width: 100%;
     height: 100%;
 }
-#fixed-text,
-.midnightInner {
-    height: 100%;
-}
-.midnightInner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/*スクロールした時に色、フォントが変わる start*/
-.blue {
-    color: #222;
-    background: #79dae8;
-}
-.black {
-    color: #fff;
-    background: #222;
-}
-.white {
-    color: #000;
-    background: #fff;
-    font-family: "Lato", "NotoSansB", sans-serif; /*フォント変更*/
-}
-/*スクロールした時に色、フォントが変わる end*/
+
+
 
 /* メインビジュアル */
 
@@ -388,7 +444,20 @@ section {
 
     z-index: 100;
 }
+span.smoothText {
+    display: block;
+}
 
+/* アニメーションで傾斜がついている文字列を水平に戻す*/
+span.smoothTextTrigger {
+    transition: 0.8s ease-in-out;
+    transform: translate3d(0, 100%, 0) skewY(12deg);
+    transform-origin: left;
+    display: block;
+}
+span.smoothTextTrigger.smoothTextAppear {
+    transform: translate3d(0, 0, 0) skewY(0);
+}
 .subtitle {
     position: absolute;
     bottom: 20%;
@@ -452,6 +521,7 @@ section {
     display: inline-block;
     right: 0;
     bottom: 37%;
+    z-index: 10;
 }
 .sub-menu li {
     font-family: "neue-haas-grotesk-display", sans-serif;
@@ -479,6 +549,7 @@ section {
 .concept {
     display: flex;
     height: 617px;
+    background-color: #fff;
 }
 
 .concept-words {
