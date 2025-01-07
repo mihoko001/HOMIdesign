@@ -56,3 +56,9 @@ h4 {
 li {
     font-size: 1.17vw;
 } */
+
+button {
+    background-color: #001900;
+    cursor: pointer;
+    border-style: none;
+}

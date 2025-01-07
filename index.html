@@ -31,61 +31,343 @@
 
 
 <body>
-    <!-- デモ用 -->
-
-
-
 
 
     <div id="loading-page">
         <div id="loading"></div>
     </div>
-    <div class="splashbg"></div>
-    <!---画面遷移用-->
-
-    <header class="header">
-
-
-        <div class="header-wrap">
-            <div class="left-border"></div>
-            <div class="right-border"></div>
-            <div class="logo">
-                <a href="#top">
-                    <h2 class="logo-text">HOMI<br><span>Design</span></h2>
-                </a>
-            </div>
+    <div class="splashbg">
+        <div id="contents">
+            <header class="header">
 
 
-            <div class="openbtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+                <div class="header-wrap">
+                    <div class="left-border"></div>
+                    <div class="right-border"></div>
+                    <div class="logo">
+                        <a href="#top">
+                            <h2 class="logo-text">HOMI<br><span>Design</span></h2>
+                        </a>
+                    </div>
 
-            <nav id="g-nav">
 
-                <ul>
-                    <li>
-                        <div class="area"><a href="profile.html"><span class="nav-number"> (1) </span>PR<span
-                                    class="italic">O</span>FILE</a></div>
-                    </li>
-                    <li>
-                        <div class="area"><a href="works.html">W<span class="italic">O</span>RKS<span
-                                    class="nav-number">
-                                    (2) </span> </a></div>
-                    </li>
-                    <li>
-                        <div class="area"><a href="#services"><span class="nav-number"> (3) </span>SERVICES</a>
+                    <div class="openbtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <nav id="g-nav">
+                        <div class="nav-left-block"></div>
+                        <div class="nav-right-block"></div>
+                        <ul>
+                            <li>
+                                <div class="area"><a href="profile.html"><span class="nav-number"> (1) </span>PR<span
+                                            class="italic">O</span>FILE</a></div>
+                            </li>
+                            <li>
+                                <div class="area"><a href="works.html" class="right-yoseru
+                                    ">W<span class="italic">O</span>RKS<span class="nav-number">
+                                            (2) </span> </a></div>
+                            </li>
+                            <li>
+                                <div class="area"><a href="#services"><span class="nav-number"> (3) </span>SERVICES</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="area"><a href="#contact" class="right-yoseru
+                            ">C<span class="italic">O</span>NTACT<span class="nav-number"> (4)
+                                        </span></a></div>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+
+
+
+                </div>
+            </header>
+
+            <!-- セクションtop -->
+
+            <!-- デモ用midnight.js -->
+            <section id="first">
+                <div id="fixed-text">
+                    <p>Sampleさんぷるサンプル</p>
+                </div>
+                <section data-midnight="blue"></section>/*背景青 文字黒*/
+                <section data-midnight="black"></section>/*背景黒 文字白*/
+                <section data-midnight="white"></section>/*背景白 文字黒*/
+            </section>
+            <!-- デモ用midnight.js -->
+
+
+
+            <section id="top">
+                <div class="main-container">
+
+                    <!-- 左側 -->
+                    <div class="left-block">
+                        <p class="scroll"> (SCROLL) </p>
+
+                    </div>
+
+
+
+
+                    <!-- メインビジュアル -->
+
+                    <div class="main">
+
+                        <div class="main-wrap">
+                            <div class="main-blur">
+                                <div class="main-leftblock">
+                                    <div class="main-title">
+
+                                        <h1><span class="smoothText"><span class="smoothTextTrigger">P<span
+                                                        class="O">O</span>RT<br>
+                                                    <span class="F">F</span><span class="O">O</span>LI<span
+                                                        class="O">O</span></span></span></h1>
+
+                                    </div>
+
+                                    <div class="subtitle">
+                                        <h2>HOMI<br>Design</h2>
+                                    </div>
+
+
+
+
+                                    <div class="message">
+                                        <p class="homi-is">HOMI Design IS A WEB DESIGNER THAT BRING OUT<br>
+                                            YOUR STRENGTHS WITH THE POWER OF DESIGN</p>
+                                    </div>
+                                </div>
+                                <div class="main-flower">
+                                    <img src="images/2x/main-flower@2x.png" alt="メインビジュアル用">
+                                </div>
+
+                                <div class="main-rightblock">
+
+
+                                    <div class="sub-menu">
+                                        <nav>
+                                            <ul>
+                                                <li><a href="#concept">PROFILE</a></li>
+                                                <li><a href="#works">WORKS</a></li>
+                                                <li><a href="#services">SERVICES</a></li>
+                                                <li><a href="#contact">CONTACT</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="since">
+                                        <h1 class="since"><span class="smoothText"><span
+                                                    class="smoothTextTrigger">‘24</span></span></h1>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="area"><a href="#contact">C<span class="italic">O</span>NTACT<span
-                                    class="nav-number"> (4)
-                                </span></a></div>
-                    </li>
-                </ul>
 
-            </nav>
+                    </div>
+                    <!-- 右側 -->
+                    <div class="right-block">
+                        <div class="sns">
+                            <div class="sns-icon1"><img src="images/1x/x-logo.webp" alt="Xロゴ"></div>
+
+                            <div class="sns-icon2"><img src="images/1x/insta-logo.webp" alt="Instagram"></div>
+
+                            <div class="sns-follow">
+                                <p class="follow">FOLLOW ME</p>
+                            </div>
+                        </div>
+                        <div class="back-to">
+                            <a href="#top" class="back-to-top"><span class="back-yazirusi"></span>
+                                <p class="back">BACK TO TOP</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+
+
+            <!-- コンセプト -->
+            <section id="concept">
+
+                <div class="concept">
+                    <div class="concept-flower">
+                        <img src="images/1x/concept-flower.png" alt="コンセプト用ポピー">
+                    </div>
+                    <div class="concept-words">
+                        <span class="smoothText"><span class="smoothTextTrigger">
+                                <h3>DISC<span>O</span>VER
+                                    Y<span class="O">O</span>URSELF.</h3>
+                            </span></span>
+                        <p class="concept-text">花はそこにあるだけで美しいように、お客様のありのままの<br>魅力を見出し、最大限に引き出すデザインを作ります。</p>
+
+
+                        <a href="profile.html" class="btnlinestretches4"><span>
+                                <p class="viewmore">VIEW PROFILE
+
+                                </p>
+                            </span></a>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </section>
+
+            <section id="works" data-midnight="black">
+
+                <span class="smoothText"><span class="smoothTextTrigger">
+                        <h2>W<span>O</span>RKS</h2>
+                    </span></span>
+
+
+
+
+
+
+
+                <div class="works-container">
+
+                    <div class="works-slider">
+                        <div class="slider-box"><img src="images/2x/mockups_giyousitsu@2x.webp" alt="美容室モックアップ">
+                            <div class="worksbox">
+                                <p class="number">01</p>
+                                <div class="title">
+                                    <h4>LP</h4>
+                                    <p class="detail">美容室　10周年記念リニューアルLP（架空）</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-box"><img src="images/2x/mockups_designcafe@2x.webp" alt="デザインカフェLP">
+                            <div class="worksbox">
+                                <p class="number">02</p>
+                                <div class="title">
+                                    <h4>LP</h4>
+                                    <p class="detail">コーヒーショップ　LP（架空）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-box"><img src="images/2x/mockups_workers@2x.webp" alt="コワーキングスペースLP">
+                            <div class="worksbox">
+                                <p class="number">03</p>
+                                <div class="title">
+                                    <h4>LP</h4>
+                                    <p class="detail">コワーキングスペース　LP（架空）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-box"><img src="images/2x/banner-hamburger@2x.webp" alt="ハンバーガーバナー">
+                            <div class="worksbox">
+                                <p class="number">04</p>
+                                <div class="title">
+                                    <h4>Banner</h4>
+                                    <p class="detail">ハンバーガー宣伝バナー（架空）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-box"><img src="images/2x/banner_sp@2x.webp" alt="ハンバーガーバナー">
+                            <div class="worksbox">
+                                <p class="number">05</p>
+                                <div class="title">
+                                    <h4>Banner</h4>
+                                    <p class="detail">スマホプラン宣伝バナー（架空）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-box"><img src="images/2x/banner-trip@2x.webp" alt="ハンバーガーバナー">
+                            <div class="worksbox">
+                                <p class="number">06</p>
+                                <div class="title">
+                                    <h4>Banner</h4>
+                                    <p class="detail">旅行アプリ宣伝バナー（架空）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="works-btn">
+                    <a href="works.html" class="btnlinestretches5">
+                        <span>
+                            <p class="viewmore">VIEW WORKS
+
+                            </p>
+                        </span>
+
+                    </a>
+                </div>
+            </section>
+
+            <section id="services">
+                <div class="services-wrap">
+                    <div class="img-left">
+                        <img src="images/1x/services2.png" alt="サービス花左">
+                    </div>
+                    <div class="services-text">
+
+
+                        <div class="title">
+                            <span class="smoothText"><span class="smoothTextTrigger">
+                                    <h3>SERVICES</h3>
+                                </span></span>
+                        </div>
+
+                        <p class="services-detail">webサイトやバナーを中心に、各種デザインを制作いたします。HTML/CSS、Javascriptを使用したweb制作も可能です。
+                            デザインから実装まで、お客様のご要望に合わせて幅広く承っております。
+                        </p>
+
+                        <p class="tool">Tools : Photoshop / Illustrator / VScode / Studio / Figma</p>
+                    </div>
+                    <div class="img-right">
+                        <img src="images/1x/services1.png" alt="サービス花右">
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="contact">
+
+
+                <!-- //////アドレスコピー試験用/////// -->
+                <div class="contact-wrap">
+                    <p class="toiawase">お問い合わせ</p>
+                    <div class="contact-hover">
+                        <button id="copy-url" data-url="crevera13@gmail.com">
+
+                            <h5>crevera13@gmail.com</h5>
+
+                        </button>
+
+
+                        <p class="copy">（ Copy mail? ）</p>
+
+                    </div>
+                </div>
+
+
+
+                <!-- //////アドレスコピー試験用/////// -->
 
 
 
@@ -94,301 +376,37 @@
 
 
 
+            </section>
 
-            <div class="menubtn">
+            <footer class="footer">
+                <div class="footer-left"></div>
+                <div class="footer-right"></div>
                 <nav>
-                    <div class="inner">
-                        <ul class="menu-title">
-
-
+                    <div class="footer-menu">
+                        <ul class="menu-list">
+                            <li><a href="#top">HOME</a></li>
+                            <li><a href="profile.html">PROFILE</a></li>
+                            <li><a href="works.html">WORKS</a></li>
+                            <li><a href="#services">SERVICES</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
                         </ul>
                     </div>
                 </nav>
 
 
-                <div class="mask"></div>
 
-
-            </div>
-        </div>
-    </header>
-
-    <!-- セクションtop -->
-    <section id="top">
-        <div class="main-container">
-
-            <!-- 左側 -->
-            <div class="left-block">
-                <p class="scroll"> (SCROLL) </p>
-
-            </div>
-
-
-
-
-            <!-- メインビジュアル -->
-            <div class="main">
-                <div class="main-wrap">
-                    <div class="main-leftblock">
-                        <div class="main-title">
-
-                            <h1><span class="smoothText"><span class="smoothTextTrigger"></span>P<span
-                                        class="O">O</span>RT<br> <span class="F">F</span><span class="O">O</span>LI<span
-                                        class="O">O</span></span></h1>
-
-                        </div>
-
-                        <div class="subtitle">
-                            <h2>HOMI<br>Design</h2>
-                        </div>
-
-
-
-
-                        <div class="message">
-                            <p class="homi-is">HOMI Design IS A WEB DESIGNER THAT BRING OUT<br>
-                                YOUR STRENGTHS WITH THE POWER OF DESIGN</p>
-                        </div>
-                    </div>
-                    <div class="main-flower">
-                        <img src="images/2x/main-flower@2x.png" alt="メインビジュアル用">
-                    </div>
-
-                    <div class="main-rightblock">
-
-
-                        <div class="sub-menu">
-                            <nav>
-                                <ul>
-                                    <li><a href="#profile">PROFILE</a></li>
-                                    <li><a href="#works">WORKS</a></li>
-                                    <li><a href="#services">SERVICES</a></li>
-                                    <li><a href="#contact">CONTACT</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="since">
-                            <h1 class="since">‘24</h1>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- 右側 -->
-            <div class="right-block">
-                <div class="sns">
-                    <div class="sns-icon1"><img src="images/1x/x-logo.webp" alt="Xロゴ"></div>
-
-                    <div class="sns-icon2"><img src="images/1x/insta-logo.webp" alt="Instagram"></div>
-
-                    <div class="sns-follow">
-                        <p class="follow">FOLLOW ME</p>
-                    </div>
-                </div>
-                <div class="back-to">
-                    <span class="back-yazirusi"></span>
-                    <p class="back"><a href="#top">BACK TO TOP</a></p>
-                </div>
-            </div>
-        </div>
-
-
-    </section>
-
-
-    <!-- <section id="midnight">
-        <div id="fixed-text">
-            <p>Sampleさんぷるサンプル</p>
-        </div>
-        <section data-midnight="blue"></section>/*背景青 文字黒*/
-        <section data-midnight="black"></section>/*背景黒 文字白*/
-        <section data-midnight="white"></section>/*背景白 文字黒*/
-    </section> -->
-
-
-    <!-- コンセプト -->
-    <section id="concept">
-
-        <div class="concept">
-            <div class="concept-flower">
-                <img src="images/1x/concept-flower.png" alt="コンセプト用ポピー">
-            </div>
-            <div class="concept-words">
-                <h3>DISC<span>O</span>VER Y<span>O</span>URSELF.</h3>
-                <p class="concept-text">花はそこにあるだけで美しいように、お客様のありのままの<br>魅力を見出し、最大限に引き出すデザインを作ります。</p>
-
-                <a href="profile.html">
-                    <div class="viewmore-btn">
-
-                        <p class="viewmore">VIEW PROFILE
-
-                        </p>
-                        <p class="yazirusi"></p>
-
-                    </div>
-                </a>
-                <span class="concept-border"></span>
-            </div>
-
-
+            </footer>
 
         </div>
-
-
-    </section>
-
-    <section id="works" data-midnight="black">
-
-        <h2>W<span>O</span>RKS</h2>
-
-
-
-
-
-
-
-        <div class="works-container">
-
-            <div class="works-slider">
-                <div class="slider-box"><img src="images/1x/mockups_giyousitsu.webp" alt="美容室モックアップ">
-                    <div class="worksbox">
-                        <p class="number">01</p>
-                        <div class="title">
-                            <h4>LP</h4>
-                            <p class="detail">美容室　10周年記念リニューアルLP（架空）</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-box"><img src="images/1x/mockups_designcafe.webp" alt="デザインカフェLP">
-                    <div class="worksbox">
-                        <p class="number">02</p>
-                        <div class="title">
-                            <h4>LP</h4>
-                            <p class="detail">コーヒーショップ　LP（架空）
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-box"><img src="images/1x/mockups_workers.webp" alt="コワーキングスペースLP">
-                    <div class="worksbox">
-                        <p class="number">03</p>
-                        <div class="title">
-                            <h4>LP</h4>
-                            <p class="detail">コワーキングスペース　LP（架空）
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-box"><img src="images/1x/banner-hamburger.webp" alt="ハンバーガーバナー">
-                    <div class="worksbox">
-                        <p class="number">04</p>
-                        <div class="title">
-                            <h4>LP</h4>
-                            <p class="detail">コワーキングスペース　LP（架空）
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-box"><img src="images/1x/banner-hamburger.webp" alt="ハンバーガーバナー">
-                    <div class="worksbox">
-                        <p class="number">04</p>
-                        <div class="title">
-                            <h4>LP</h4>
-                            <p class="detail">コワーキングスペース　LP（架空）
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-box"><img src="images/1x/banner-hamburger.webp" alt="ハンバーガーバナー">
-                    <div class="worksbox">
-                        <p class="number">04</p>
-                        <div class="title">
-                            <h4>LP</h4>
-                            <p class="detail">コワーキングスペース　LP（架空）
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-        </div>
-
-        <div class="works-btn"><a href="works.html">
-                <div class="viewworks-btn">
-                    <p class="viewmore">VIEW WORKS
-
-                    </p>
-                    <p class="yazirusi"></p>
-
-                </div>
-                <div class="works-border"></div>
-            </a>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="services-wrap">
-            <div class="img-left">
-                <img src="images/1x/services2.png" alt="サービス花左">
-            </div>
-            <div class="services-text">
-
-
-                <div class="title">
-                    <h3>SERVICES</h3>
-                </div>
-
-                <p class="services-detail">webサイトやバナーを中心に、各種デザインを制作いたします。HTML/CSS、Javascriptを使用したweb制作も可能です。
-                    デザインから実装まで、お客様のご要望に合わせて幅広く承っております。
-                </p>
-
-                <p class="tool">Tools : Photoshop / Illustrator / VScode / Studio / Figma</p>
-            </div>
-            <div class="img-right">
-                <img src="images/1x/services1.png" alt="サービス花右">
-            </div>
-
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact-wrap">
-            <p class="toiawase">お問い合わせ</p>
-            <span class="mail-border">
-                <h5><a href="">crevera13@gmail.com</a></h5>
-            </span>
-            <p class="copy">（ Copy mail? ）</p>
-        </div>
-
-
-
-    </section>
-
-    <footer class="footer">
-        <div class="footer-left"></div>
-        <div class="footer-right"></div>
-        <nav>
-            <div class="footer-menu">
-                <ul class="menu-list">
-                    <li><a href="#top">HOME</a></li>
-                    <li><a href="profile.html">PROFILE</a></li>
-                    <li><a href="works.html">WORKS</a></li>
-                    <li><a href="#services">SERVICES</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </div>
-        </nav>
-
-
-
-    </footer>
-
-
+    </div>
 
     <script>
+
+        $(function () {
+            $('#fixed-text').midnight();
+        });
+
+
         $('a[href*="#"]').click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
             var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
             var pos = $(elmHash).offset().top;	//idの上部の距離を取得
@@ -443,15 +461,19 @@
 
         // 画面が読み込まれたらすぐに動かしたい場合の記述
         $(window).on('load', function () {
-            SmoothTextAnime();/* アニメーション用の関数を呼ぶ*/
+            setTimeout(function () {
+                SmoothTextAnime();
+            }, 2000)
+            /* アニメーション用の関数を呼ぶ*/
         });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
         $('.works-slider').slick({
             centerMode: true,
             centerPadding: '20px',
             slidesToShow: 3,
-            // autoplay: true,
-            // autoplaySpeed: 3000,
+            autoplay: true,
+            arrows: false,
+            autoplaySpeed: 3000,
             responsive: [
                 {
                     breakpoint: 768,
@@ -514,12 +536,34 @@
                 $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
                 var h = $(window).height();//ブラウザの高さを取得
                 $(".splashbg").css({
-                    "border-width": h,//ボーダーの太さにブラウザの高さを代入
-                    "animation-name": "backBoxAnime"//animation-nameを定義
+                    "animation": "clipPath 3s cubic-bezier(.220, .60, .350,1) 0s 1 forwards"
                 });
             });
-            $("loading").delay(2000).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
+            setTimeout(function () {
+                $('.splashbg').css('display', 'contents')
+            }, 3000)
         });
+
+
+        $(function () {
+            $('#copy-url').click(function () {
+                // data-urlの値を取得
+                const url = $(this).data('url');
+
+                // クリップボードにコピー
+                navigator.clipboard.writeText(url);
+
+                // フラッシュメッセージ表示
+                // $('.success-msg').fadeIn("slow", function () {
+                //     $(this).delay(2000).fadeOut("slow");
+                // });
+            });
+        });
+
+
+
+
+
 
     </script>
 

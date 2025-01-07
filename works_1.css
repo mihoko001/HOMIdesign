@@ -244,3 +244,15 @@
     width: 1px; /*線の幅指定*/
     height: 60px; /*線の高さ指定*/
 }
+
+@media screen and (max-width: 1100px) {
+    .text-table th {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .prev-next {
+        padding-bottom: 25%;
+    }
+}
