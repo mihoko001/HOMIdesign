@@ -91,17 +91,6 @@
 
             <!-- セクションtop -->
 
-            <!-- デモ用midnight.js -->
-            <section id="first">
-                <div id="fixed-text">
-                    <p>Sampleさんぷるサンプル</p>
-                </div>
-                <section data-midnight="blue"></section>/*背景青 文字黒*/
-                <section data-midnight="black"></section>/*背景黒 文字白*/
-                <section data-midnight="white"></section>/*背景白 文字黒*/
-            </section>
-            <!-- デモ用midnight.js -->
-
 
 
             <section id="top">
@@ -173,9 +162,9 @@
                     <!-- 右側 -->
                     <div class="right-block">
                         <div class="sns">
-                            <div class="sns-icon1"><img src="images/1x/x-logo.webp" alt="Xロゴ"></div>
+                            <div class="sns-icon1"><img src="images/1x/logo-black.png" alt="Xロゴ"></div>
 
-                            <div class="sns-icon2"><img src="images/1x/insta-logo.webp" alt="Instagram"></div>
+                            <div class="sns-icon2"><img src="images/1x/Instagram_Glyph_Black.png" alt="Instagram"></div>
 
                             <div class="sns-follow">
                                 <p class="follow">FOLLOW ME</p>
@@ -363,6 +352,7 @@
                         <p class="copy">（ Copy mail? ）</p>
 
                     </div>
+
                 </div>
 
 
@@ -379,8 +369,12 @@
             </section>
 
             <footer class="footer">
-                <div class="footer-left"></div>
-                <div class="footer-right"></div>
+                <div class="footer-left">
+
+                </div>
+                <div class="footer-right">
+
+                </div>
                 <nav>
                     <div class="footer-menu">
                         <ul class="menu-list">
@@ -393,7 +387,7 @@
                     </div>
                 </nav>
 
-
+                <p class="copyright">©︎2024 HOMI design </p>
 
             </footer>
 
@@ -537,10 +531,15 @@
                 var h = $(window).height();//ブラウザの高さを取得
                 $(".splashbg").css({
                     "animation": "clipPath 3s cubic-bezier(.220, .60, .350,1) 0s 1 forwards"
+
                 });
+                $('.main-blur').css({
+                    "animation": "blur 2s ease-in-out forwards"
+                })
             });
             setTimeout(function () {
                 $('.splashbg').css('display', 'contents')
+
             }, 3000)
         });
 
@@ -553,6 +552,7 @@
                 // クリップボードにコピー
                 navigator.clipboard.writeText(url);
 
+                $('.copy').text('（ Mail is copied! ）')
                 // フラッシュメッセージ表示
                 // $('.success-msg').fadeIn("slow", function () {
                 //     $(this).delay(2000).fadeOut("slow");

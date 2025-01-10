@@ -17,6 +17,8 @@ dt,
 dd,
 ul,
 li,
+td,
+th,
 details,
 summary {
     margin: 0;
@@ -56,9 +58,545 @@ h4 {
 li {
     font-size: 1.17vw;
 } */
+/* ヘッダー */
+.header-wrap {
+    position: fixed;
+    top: 0;
+    width: 100%;
 
+    background-color: #001900;
+    height: 60px;
+    z-index: 999;
+}
+.left-border {
+    position: fixed;
+    left: 3%; /*横位置の指定*/
+    background: #fff; /*線の色指定*/
+    width: 1px; /*線の幅指定*/
+    height: 60px; /*線の高さ指定*/
+}
+
+.right-border {
+    position: fixed;
+    right: 3%; /*横位置の指定*/
+    background: #fff; /*線の色指定*/
+    width: 1px; /*線の幅指定*/
+    height: 60px; /*線の高さ指定*/
+}
+.logo-text {
+    color: #fff;
+    position: fixed;
+
+    left: 5%;
+    top: 9px;
+
+    font-family: "cormorant-garamond", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 28px;
+    letter-spacing: -0.04em;
+}
+
+.logo-text span {
+    font-size: 20px;
+    position: relative;
+    top: -12px;
+}
+
+/* ーーーーーーデモ用ナビーーーーーーー */
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav {
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position: fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+    top: 0;
+    right: -120%;
+    width: 100%;
+    height: 100vh; /*ナビの高さ*/
+    background: #001900;
+    /*動き*/
+    transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive {
+    right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh; /*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+}
+
+/*リストのレイアウト設定*/
+
+.nav-left-block,
+.nav-right-block {
+    width: 3%;
+    height: 100vh;
+    position: absolute;
+
+    z-index: 100;
+}
+
+.nav-left-block {
+    left: 0;
+    border-right: 1px solid #fff;
+
+    display: grid;
+    place-items: center;
+}
+.nav-right-block {
+    right: 0;
+    border-left: 1px solid #fff;
+    display: grid;
+    place-items: center;
+}
+
+#g-nav ul li .area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.right-yoseru {
+    justify-content: flex-end;
+}
+
+#g-nav li a {
+    text-decoration: none;
+    padding: 3%;
+    display: flex;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #666666;
+
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120px;
+}
+
+#g-nav .nav-number {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+
+    padding: 2%;
+}
+#g-nav .italic {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 120px;
+    letter-spacing: -0.04em;
+}
+/*========= ボタンのためのCSS ===============*/
+.openbtn {
+    position: fixed;
+    z-index: 9999; /*ボタンを最前面に*/
+    top: 10px;
+    right: 70px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+/*×に変化*/
+.openbtn span {
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    border-radius: 2px;
+
+    background-color: #fff;
+    width: 70%;
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 7px;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 20px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 33px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 100%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 100%;
+}
+
+/* ーーーーーー使う予定のナビーーーーーー */
+
+.header nav {
+    display: block;
+    /* position: absolute; */
+    width: 560px;
+    top: 0;
+
+    bottom: 0;
+    transition: all 0.5s;
+    z-index: 3;
+}
+
+.toggle-btn {
+    display: block;
+    position: fixed;
+    top: 12px;
+    right: 5%;
+    width: 32px;
+    height: 32px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.toggle-btn span {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 32px;
+    /* background-color: #001900; */
+    border-bottom: 6px dotted #fff;
+    /* background-image: linear-gradient(to right, #fff 80%, #001900 80%);
+    background-size: 10px 5px;
+    background-repeat: repeat-3;
+    background-position: center; */
+}
+
+.toggle-btn span:nth-child(1) {
+    top: 3px;
+}
+.toggle-btn span:nth-child(2) {
+    top: 16px;
+}
+.toggle-btn span:nth-child(3) {
+    top: 29px;
+}
+/* メインビジュアル両サイド */
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #e5e8e5;
+}
+
+.left-block,
+.right-block {
+    width: 3%;
+    min-height: 100vh;
+    position: relative;
+
+    z-index: 100;
+}
+
+.left-block {
+    position: fixed;
+    left: 0;
+    border-right: 1px solid #001900;
+
+    display: grid;
+    place-items: center;
+}
+.right-block {
+    position: fixed;
+    right: 0;
+    border-left: 1px solid #001900;
+    display: grid;
+    place-items: center;
+}
+
+.sns {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 30px;
+}
+.sns-icon1,
+.sns-icon2 {
+    width: 50%;
+}
+.right-block p {
+    font-family: "cormorant-garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.back-yazirusi:after {
+    content: "";
+    width: 15px;
+    height: 3px;
+    border-bottom: solid 1px;
+    border-right: solid 1px;
+    transform: skew(45deg);
+}
+.left-block p {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+
+    font-size: 12px;
+    letter-spacing: 0.2em;
+}
+.copyright {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    position: absolute;
+    left: 1%;
+    bottom: 80px;
+
+    margin: 0 calc(50% - 50vw);
+    height: 100vh;
+}
 button {
     background-color: #001900;
     cursor: pointer;
     border-style: none;
+}
+.follow:hover,
+.back-to-top:hover,
+.back-to-top:hover p {
+    color: #999c99;
+}
+.back-yazirusi {
+    display: inline-flex;
+    transform: rotate(270deg);
+}
+.follow,
+.back-to-top,
+.back-to-top p {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.back-to-top p {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .sns-icon1,
+    .sns-icon2 {
+        width: 60%;
+    }
+    .footer-left,
+    .left-border {
+        left: 4%;
+    }
+    .footer-right {
+        right: 4%;
+        z-index: 10000;
+    }
+    .right-border {
+        right: 4%;
+    }
+    .left-block,
+    .right-block {
+        width: 4%;
+    }
+    .scroll {
+        color: #b3b7b3;
+    }
+
+    .copyright {
+        left: 1.5%;
+    }
+    .logo-text {
+        left: 7%;
+    }
+
+    .openbtn {
+        right: 60px;
+        top: 4px;
+    }
+
+    #g-nav li a {
+        font-size: 80px;
+    }
+
+    #g-nav .nav-number {
+        font-size: 14px;
+    }
+    #g-nav .italic {
+        font-size: 80px;
+    }
+    #g-nav ul li {
+        padding-top: 20%;
+    }
+    #g-nav ul li:nth-child(1) {
+        padding-top: 0;
+    }
+
+    /*========= ボタンのためのCSS ===============*/
+    .openbtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 9px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 20px;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 31px;
+    }
+
+    @media screen and (max-width: 767px) {
+        p,
+        a,
+        th,
+        td {
+            font-size: 14px;
+        }
+        .openbtn {
+            right: 50px;
+        }
+        .logo-text {
+            left: 8%;
+        }
+        .footer {
+            position: static;
+            height: 224px;
+        }
+        .menu-list {
+            flex-wrap: wrap;
+            width: 30%;
+            margin: 0 auto;
+            gap: 23px;
+        }
+        .logo-text {
+            font-size: 18px;
+        }
+        .logo-text span {
+            font-size: 14px;
+
+            top: -6px;
+        }
+        .footer-left,
+        .footer-right {
+            position: static;
+            height: 224px;
+            position: absolute;
+        }
+        .footer-left,
+        .left-border {
+            left: 5%;
+        }
+        .left-border {
+            height: 48px;
+        }
+        .footer-right {
+            right: 5%;
+            z-index: 10000;
+        }
+        .right-border {
+            right: 5%;
+            height: 48px;
+        }
+        .left-block,
+        .right-block {
+            width: 5%;
+        }
+        .copyright {
+            bottom: 50px;
+        }
+
+        .sns-icon1,
+        .sns-icon2 {
+            width: 70%;
+        }
+        #g-nav li a {
+            font-size: 36px;
+        }
+
+        #g-nav .nav-number {
+            font-size: 12px;
+        }
+        #g-nav .italic {
+            font-size: 36px;
+        }
+        #g-nav ul li {
+            padding-top: 30%;
+        }
+        #g-nav ul li {
+            padding-top: 10%;
+        }
+        /*========= ボタンのためのCSS ===============*/
+        .openbtn {
+            width: 35px;
+            height: 20px;
+        }
+        .openbtn span:nth-of-type(1) {
+            top: 10px;
+        }
+
+        .openbtn span:nth-of-type(2) {
+            top: 20px;
+        }
+
+        .openbtn span:nth-of-type(3) {
+            top: 30px;
+        }
+        .header-wrap {
+            height: 48px;
+        }
+    }
 }

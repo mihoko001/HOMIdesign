@@ -5,16 +5,18 @@
     font-family: "cormorant-garamond", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 8vw;
+    font-size: 7.5em;
     letter-spacing: -0.06;
     text-align: center;
     padding: 12% 12%;
 }
 .prof img {
-    height: 24vw;
+    width: 330px;
+    height: 409px;
 }
 .prof-detail {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10%;
     padding-bottom: 21%;
@@ -23,18 +25,14 @@
     font-family: "cormorant-garamond", serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 8vw;
+
     letter-spacing: -0.06;
 }
 .prof-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 29vw;
+    width: 350px;
 }
 .my-name {
-    font-size: 1.8vw;
+    font-size: 1.563em;
     padding-bottom: 5%;
 }
 .my-career {
@@ -50,7 +48,7 @@
     font-family: "cormorant-garamond", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 15vw;
+    font-size: 13.125em;
     letter-spacing: -0.06;
     padding-top: 13vw;
     position: relative;
@@ -71,6 +69,7 @@
     position: relative;
     left: -20vw;
     bottom: 46vw;
+    overflow: hidden;
 }
 .skill-wrap {
     width: 87vw;
@@ -430,4 +429,42 @@
     background: #fff; /*線の色指定*/
     width: 1px; /*線の幅指定*/
     height: 60px; /*線の高さ指定*/
+}
+@media screen and (max-width: 1100px) {
+    .prof img {
+        width: 250px;
+        height: 309px;
+    }
+    .design-tool,
+    .cording-tool {
+        padding: 2vw 0 2vw 0;
+    }
+    .circle1,
+    .circle2 {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .prof-detail {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .my-name {
+        padding-top: 10%;
+    }
+    .circle1,
+    .circle2 {
+        width: 0;
+        height: 0;
+    }
+    .skill-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .design-wrap,
+    .cording-wrap {
+        position: static;
+    }
 }

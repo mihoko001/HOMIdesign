@@ -28,6 +28,7 @@
     margin: 0 auto;
     border: solid 1px #cccecc;
     border-radius: 50px;
+    margin-bottom: 8%;
 }
 .gnavi li a {
     /*線の基点とするためrelativeを指定*/
@@ -134,6 +135,7 @@
 .container {
     display: flex;
     gap: 5%;
+
     flex-wrap: wrap;
 }
 .box {
@@ -199,4 +201,26 @@
     background: #fff; /*線の色指定*/
     width: 1px; /*線の幅指定*/
     height: 60px; /*線の高さ指定*/
+}
+
+@media screen and (max-width: 1100px) {
+    #top h3 {
+        padding: 15% 0 5% 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        justify-content: center;
+    }
+    #top h3 {
+        padding: 25% 0 5% 0;
+        font-size: 80px;
+    }
+    .filter ul {
+        padding: 15px;
+    }
+    .jenre {
+        padding-bottom: 5%;
+    }
 }
