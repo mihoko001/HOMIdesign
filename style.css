@@ -662,6 +662,7 @@ span.smoothTextTrigger.smoothTextAppear {
         top: 60%;
         left: 14%;
     }
+
     .main h2 {
         font-size: 7vw;
     }
@@ -761,12 +762,16 @@ span.smoothTextTrigger.smoothTextAppear {
     }
     .subtitle {
         position: absolute;
-        top: 60%;
-        left: 14%;
+        top: 55%;
+        left: 11%;
+    }
+    .main-title {
+        position: absolute;
+        left: -23%;
     }
     .main h2 {
-        font-size: 36px;
-        left: -10%;
+        font-size: 38px;
+        left: -25%;
     }
 
     .message p {
@@ -774,19 +779,19 @@ span.smoothTextTrigger.smoothTextAppear {
         color: #b3b7b3;
     }
     .homi-is {
-        bottom: -2%;
+        bottom: 0%;
         left: 8%;
     }
 
     .main-flower {
-        width: 39vw;
+        width: 48vw;
 
-        right: 7vw;
-        bottom: 13%;
+        right: -5vw;
+        top: 22%;
     }
 
     .main h1 {
-        font-size: 23vw;
+        font-size: 28vw;
     }
 
     .sub-menu {
@@ -797,10 +802,10 @@ span.smoothTextTrigger.smoothTextAppear {
         display: none;
     }
     .since h1 {
-        font-size: 20vw;
+        font-size: 28vw;
 
-        bottom: 7%;
-        right: -12%;
+        top: 60%;
+        right: -25%;
     }
 
     .concept-flower img {
