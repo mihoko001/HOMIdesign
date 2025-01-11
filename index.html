@@ -45,7 +45,7 @@
                     <div class="left-border"></div>
                     <div class="right-border"></div>
                     <div class="logo">
-                        <a href="#top">
+                        <a href="index.html">
                             <h2 class="logo-text">HOMI<br><span>Design</span></h2>
                         </a>
                     </div>
@@ -71,11 +71,12 @@
                                             (2) </span> </a></div>
                             </li>
                             <li>
-                                <div class="area"><a href="#services"><span class="nav-number"> (3) </span>SERVICES</a>
+                                <div class="area"><a href="index.html#services"><span class="nav-number"> (3)
+                                        </span>SERVICES</a>
                                 </div>
                             </li>
                             <li>
-                                <div class="area"><a href="#contact" class="right-yoseru
+                                <div class="area"><a href="index.html#contact" class="right-yoseru
                             ">C<span class="italic">O</span>NTACT<span class="nav-number"> (4)
                                         </span></a></div>
                             </li>
@@ -162,9 +163,10 @@
                     <!-- 右側 -->
                     <div class="right-block">
                         <div class="sns">
-                            <div class="sns-icon1"><img src="images/1x/logo-black.png" alt="Xロゴ"></div>
+                            <div class="sns-icon1"><img src="images/SVG/logo.svg" alt="Xロゴ"></div>
 
-                            <div class="sns-icon2"><img src="images/1x/Instagram_Glyph_Black.png" alt="Instagram"></div>
+                            <div class="sns-icon2"><img src="images/SVG/Instagram_Glyph_Black.svg" alt="Instagram">
+                            </div>
 
                             <div class="sns-follow">
                                 <p class="follow">FOLLOW ME</p>
@@ -216,6 +218,8 @@
             </section>
 
             <section id="works" data-midnight="black">
+                <div class="left-border"></div>
+                <div class="right-border"></div>
 
                 <span class="smoothText"><span class="smoothTextTrigger">
                         <h2>W<span>O</span>RKS</h2>
@@ -335,11 +339,14 @@
                 </div>
             </section>
 
-            <section id="contact">
-
+            <section id="contact" data-midnight="black">
+                <div class="left-border"></div>
+                <div class="right-border"></div>
 
                 <!-- //////アドレスコピー試験用/////// -->
                 <div class="contact-wrap">
+
+
                     <p class="toiawase">お問い合わせ</p>
                     <div class="contact-hover">
                         <button id="copy-url" data-url="crevera13@gmail.com">
@@ -368,7 +375,7 @@
 
             </section>
 
-            <footer class="footer">
+            <footer class="footer" data-midnight="black">
                 <div class="footer-left">
 
                 </div>
@@ -378,11 +385,11 @@
                 <nav>
                     <div class="footer-menu">
                         <ul class="menu-list">
-                            <li><a href="#top">HOME</a></li>
+                            <li><a href="index.html#top">HOME</a></li>
                             <li><a href="profile.html">PROFILE</a></li>
                             <li><a href="works.html">WORKS</a></li>
-                            <li><a href="#services">SERVICES</a></li>
-                            <li><a href="#contact">CONTACT</a></li>
+                            <li><a href="index.html#services">SERVICES</a></li>
+                            <li><a href="index.html#contact">CONTACT</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -397,7 +404,8 @@
     <script>
 
         $(function () {
-            $('#fixed-text').midnight();
+            $('.left-block').midnight();
+            $('.right-block').midnight();
         });
 
 

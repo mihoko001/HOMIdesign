@@ -42,7 +42,9 @@
 /* スキル */
 
 #skills {
+    position: relative;
     background-color: #e6e8e6;
+    overflow-x: hidden;
 }
 .skill-title {
     font-family: "cormorant-garamond", serif;
@@ -69,7 +71,6 @@
     position: relative;
     left: -20vw;
     bottom: 46vw;
-    overflow: hidden;
 }
 .skill-wrap {
     width: 87vw;

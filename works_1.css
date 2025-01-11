@@ -258,8 +258,8 @@
     .text-table {
         width: 100%;
     }
-    table .text-table th,
-    table .text-table td {
+    table.text-table th,
+    table.text-table td {
         display: block;
         width: 100%;
     }
@@ -268,7 +268,8 @@
         width: 230px;
     }
     .all {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
     }
     #works_1_top h3 {
         font-size: 5em;
