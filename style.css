@@ -120,6 +120,7 @@ section {
 .main {
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 /* background-color: aqua; */
 .main-blur {
@@ -579,6 +580,7 @@ span.smoothTextTrigger.smoothTextAppear {
 /* コンタクト */
 #contact {
     background-color: #001900;
+    position: relative;
 }
 #contact .left-border,
 #contact .right-border {

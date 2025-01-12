@@ -359,6 +359,14 @@ li {
 .sns-icon2 {
     width: 50%;
 }
+.sns-icon1 svg {
+    width: 20px;
+    height: 20px;
+}
+.black .sns-icon1 svg path {
+    fill: white;
+}
+
 .left-block p,
 .right-block p {
     color: inherit;
@@ -461,20 +469,22 @@ button {
 }
 
 .footer-left {
-    position: fixed;
+    position: absolute;
     left: 3%; /*横位置の指定*/
     background: #fff; /*線の色指定*/
     width: 1px; /*線の幅指定*/
     height: 60px; /*線の高さ指定*/
     z-index: 100;
+    bottom: 0;
 }
 
 .footer-right {
-    position: fixed;
+    position: absolute;
     right: 3%; /*横位置の指定*/
     background: #fff; /*線の色指定*/
     width: 1px; /*線の幅指定*/
     height: 60px; /*線の高さ指定*/
+    bottom: 0;
 }
 @media screen and (max-width: 1100px) {
     .sns-icon1,
