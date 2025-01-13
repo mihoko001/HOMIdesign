@@ -724,7 +724,30 @@ span.smoothText {
         right: -2%;
     }
 }
-
+@media screen and (max-width: 1000px) {
+    .concept-words {
+        width: 40%;
+    }
+    .concept-words h3,
+    .concept-words span {
+        font-size: 60px;
+    }
+    .concept-flower img {
+    }
+    #works h2,
+    #works h2 span {
+        font-size: 160px;
+    }
+    .services-wrap img {
+        width: 80%;
+    }
+    .services-text {
+        width: 60%;
+    }
+    .img-right {
+        right: -200px;
+    }
+}
 @media screen and (max-width: 767px) {
     .detail {
         overflow: hidden;

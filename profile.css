@@ -488,6 +488,16 @@ span.smoothTextTrigger.smoothTextAppear {
         top: 12%;
     }
 }
+@media screen and (max-width: 900px) {
+    .design-text,
+    .cording-text {
+        width: 35vw;
+    }
+    .circle1,
+    .circle2 {
+        border: solid 0;
+    }
+}
 
 @media screen and (max-width: 767px) {
     .prof h3 {
