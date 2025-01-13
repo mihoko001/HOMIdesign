@@ -369,10 +369,11 @@ span.smoothTextTrigger.smoothTextAppear {
 .copyright {
     position: absolute;
     left: 0;
-    width: 2%;
+    width: 3%;
     margin: 0 auto;
     z-index: 100;
-    display: grid;
+    display: flex;
+    align-items: center;
 }
 
 .right-block {
@@ -463,7 +464,7 @@ button {
 .back-to-top:hover p,
 .prev:hover p,
 .next:hover p,
-.menu-list:hover li {
+.menu-list li:hover {
     color: #999c99;
 }
 .back-yazirusi {
@@ -484,14 +485,17 @@ button {
 .back-to-top p {
     margin-top: 10px;
 }
-
+.back-to-top {
+    /* position: absolute;
+    z-index: 10000; */
+}
 /* フッター */
 .footer {
     position: fixed;
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #001900;
+
     height: 60px;
     display: flex;
     align-items: center;
@@ -559,7 +563,7 @@ button {
     }
 
     .copyright {
-        left: 2%;
+        width: 4%;
     }
     .logo-text {
         left: 7%;
@@ -703,6 +707,7 @@ button {
         }
         .copyright {
             color: #999c99;
+            width: 5%;
         }
     }
 }

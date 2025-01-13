@@ -553,21 +553,33 @@
         bar.animate(1.0);
 
         $(window).on('load', function () {
-            $("#loading-page").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
-                $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
-                var h = $(window).height();//ブラウザの高さを取得
-                $(".splashbg").css({
-                    "animation": "clipPath 3s cubic-bezier(.220, .60, .350,1) 0s 1 forwards"
-
-                });
+            let hash = window.location.hash
+            if (hash) {
+                $("#loading-page").hide()
+                $('body').addClass('appear');
                 $('.main-blur').css({
                     "animation": "blur 2s ease-in-out forwards"
                 })
-            });
-            setTimeout(function () {
                 $('.splashbg').css('display', 'contents')
+                $('html, body').animate({ scrollTop: $(hash).offset().top })
+            } else {
+                $("#loading-page").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+                    $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+                    var h = $(window).height();//ブラウザの高さを取得
+                    $(".splashbg").css({
+                        "animation": "clipPath 3s cubic-bezier(.220, .60, .350,1) 0s 1 forwards"
 
-            }, 3000)
+                    });
+                    $('.main-blur').css({
+                        "animation": "blur 2s ease-in-out forwards"
+                    })
+                });
+                setTimeout(function () {
+                    $('.splashbg').css('display', 'contents')
+
+                }, 3000)
+            }
+
         });
 
 

@@ -203,6 +203,7 @@ span.smoothTextTrigger.smoothTextAppear {
 
 #strength {
     background-color: #001900;
+    position: relative;
 }
 /* #strength p,
 #strength h3,
@@ -566,15 +567,14 @@ span.smoothTextTrigger.smoothTextAppear {
     }
     .name {
         font-size: 34px;
-        position: absolute;
-        margin-left: auto;
+
         padding-left: 3%;
         padding-bottom: 3%;
     }
     .number {
         font-size: 14px;
-        position: relative;
-        bottom: 20px;
+        position: absolute;
+        top: -20px;
     }
 
     .strength-container {
