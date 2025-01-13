@@ -580,9 +580,7 @@ button {
     #g-nav .italic {
         font-size: 80px;
     }
-    #g-nav ul li {
-        padding-top: 20%;
-    }
+
     #g-nav ul li:nth-child(1) {
         padding-top: 0;
     }
@@ -680,10 +678,10 @@ button {
             font-size: 36px;
         }
         #g-nav ul li {
-            padding-top: 30%;
+            padding-top: 30vh;
         }
         #g-nav ul li {
-            padding-top: 10%;
+            padding-top: 10vh;
         }
         /*========= ボタンのためのCSS ===============*/
         .openbtn {

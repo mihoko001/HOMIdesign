@@ -245,6 +245,13 @@
     .prev-next {
         padding-bottom: 25%;
     }
+    .pc {
+        width: 51%;
+    }
+    .sp {
+        width: 15%;
+        padding-top: 1%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -256,9 +263,9 @@
         display: block;
         width: 100%;
     }
-    .pc img,
-    .sp img {
-        width: 230px;
+    .pc,
+    .sp {
+        width: 65%;
     }
     .all {
         flex-direction: column;

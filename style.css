@@ -874,3 +874,21 @@ span.smoothText {
         text-align: start;
     }
 }
+@media screen and (max-width: 400px) {
+    .btnlinestretches4 {
+        width: 50%;
+    }
+    .btnlinestretches5 {
+        width: 70%;
+    }
+    .works-btn {
+        left: -5%;
+    }
+    #works h2 {
+        margin: 0 auto;
+    }
+    .img-left,
+    .img-right {
+        width: 130px;
+    }
+}
