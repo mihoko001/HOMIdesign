@@ -1,5 +1,19 @@
 @charset 'utf-8';
-
+html,
+body {
+    overflow-x: hidden;
+}
+body {
+    animation: loading 1s;
+}
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 span.smoothText {
     display: block;
     overflow: hidden;
@@ -60,7 +74,6 @@ span.smoothTextTrigger.smoothTextAppear {
 #skills {
     position: relative;
     background-color: #e6e8e6;
-    overflow-x: hidden;
 }
 .skill-title {
     font-family: "cormorant-garamond", serif;
@@ -496,6 +509,8 @@ span.smoothTextTrigger.smoothTextAppear {
     .circle1,
     .circle2 {
         border: solid 0;
+        width: 100%;
+        height: auto;
     }
     .skill-wrap {
         display: flex;
@@ -503,7 +518,9 @@ span.smoothTextTrigger.smoothTextAppear {
         justify-content: center;
         align-items: center;
         height: 1280px;
-        gap: 20%;
+        gap: 5%;
+        margin: 0 auto;
+        width: 70vw;
     }
     .skill-wrap img {
         position: absolute;
@@ -521,13 +538,14 @@ span.smoothTextTrigger.smoothTextAppear {
     .design-wrap,
     .cording-wrap {
         position: static;
+        width: 100%;
     }
     /* .design-wrap {
         top: 30%;
     } */
     .design-text,
     .cording-text {
-        width: 274px;
+        width: 100%;
     }
     .design-title,
     .cording-title {
