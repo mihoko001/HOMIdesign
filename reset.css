@@ -103,6 +103,22 @@ li {
     top: -12px;
 }
 
+.midnightInner {
+    height: 100%;
+}
+.midnightInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-block .midnightInner {
+    display: grid;
+    place-items: center;
+}
+.black {
+    color: #fff;
+}
 /* ーーーーーーデモ用ナビーーーーーーー */
 
 /*========= ナビゲーションのためのCSS ===============*/
@@ -352,18 +368,20 @@ li {
 .sns {
     display: flex;
     flex-flow: column;
-    align-items: center;
+
     gap: 30px;
 }
 .sns-icon1,
 .sns-icon2 {
     width: 50%;
 }
-.sns-icon1 svg {
-    width: 20px;
-    height: 20px;
+.sns-icon1 svg,
+.sns-icon2 svg {
+    width: 16px;
+    height: 16px;
 }
-.black .sns-icon1 svg path {
+.black .sns-icon1 svg path,
+.black .sns-icon2 svg path {
     fill: white;
 }
 
@@ -487,6 +505,10 @@ button {
     bottom: 0;
 }
 @media screen and (max-width: 1100px) {
+    .menu-list li {
+        width: 100%;
+        text-align: center;
+    }
     .sns-icon1,
     .sns-icon2 {
         width: 60%;

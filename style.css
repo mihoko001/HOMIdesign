@@ -1,25 +1,7 @@
 @charset 'utf-8';
 /*========= デモ用midnight.js ===============*/
 
-.midnightInner {
-    height: 100%;
-}
-.midnightInner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.right-block .midnightInner {
-    display: grid;
-    place-items: center;
-}
-
 /*スクロールした時に色、フォントが変わる start*/
-
-.black {
-    color: #fff;
-}
 
 /*========= デモ用midnight.js===============*/
 #loading {
@@ -169,7 +151,7 @@ span.smoothText {
 
 /* アニメーションで傾斜がついている文字列を水平に戻す*/
 span.smoothTextTrigger {
-    transition: 0.8s ease-in-out;
+    transition: 0.5s ease-in-out;
     transform: translate3d(0, 10%, 0) skewY(12deg);
     transform-origin: left;
     display: block;
@@ -751,10 +733,6 @@ span.smoothTextTrigger.smoothTextAppear {
         bottom: 2%;
         right: -2%;
     }
-    .menu-list li {
-        width: 100%;
-        text-align: center;
-    }
 }
 
 @media screen and (max-width: 767px) {
@@ -827,7 +805,7 @@ span.smoothTextTrigger.smoothTextAppear {
 
     .concept-words {
         width: 73%;
-        padding: 2% 0 5% 0;
+        padding: 2% 0 20% 0;
         margin: 0 auto;
     }
 
@@ -898,8 +876,8 @@ span.smoothTextTrigger.smoothTextAppear {
     }
     .btnlinestretches4 {
         width: 40%;
-        right: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
     }
 }

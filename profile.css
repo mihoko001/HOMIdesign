@@ -1,5 +1,21 @@
 @charset 'utf-8';
 
+span.smoothText {
+    display: block;
+    overflow: hidden;
+    padding: 50px;
+}
+
+/* アニメーションで傾斜がついている文字列を水平に戻す*/
+span.smoothTextTrigger {
+    transition: 0.5s ease-in-out;
+    transform: translate3d(0, 10%, 0) skewY(12deg);
+    transform-origin: left;
+    display: block;
+}
+span.smoothTextTrigger.smoothTextAppear {
+    transform: translate3d(0, 0, 0) skewY(0);
+}
 /* プロフィール */
 .prof h3 {
     font-family: "cormorant-garamond", serif;
@@ -278,7 +294,12 @@
 #strength {
     background-color: #001900;
 }
-
+#strength .left-border,
+#strength .right-border {
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+}
 .accordion {
     width: 73%;
     margin-bottom: 1%;
@@ -448,24 +469,105 @@
 }
 
 @media screen and (max-width: 767px) {
+    .prof h3 {
+        font-size: 38px;
+        padding-top: 20%;
+        padding-bottom: 0;
+    }
+    .skill-title {
+        position: absolute;
+        font-size: 80px;
+        left: 50%;
+        margin-top: 25%;
+        transform: translate(-50%, -50%);
+    }
     .prof-detail {
         display: flex;
         flex-wrap: wrap;
     }
+    .prof-text {
+        width: 265px;
+    }
     .my-name {
+        font-size: 18px;
         padding-top: 10%;
+        padding-bottom: 20%;
     }
     .circle1,
     .circle2 {
-        width: 0;
-        height: 0;
+        border: solid 0;
     }
     .skill-wrap {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 1280px;
+        gap: 20%;
+    }
+    .skill-wrap img {
+        position: absolute;
+        bottom: -3%;
+        left: -20vw;
+    }
+    .img-right img {
+        top: 10%;
+    }
+
+    .design-detail,
+    .cording-detail {
+        width: 100%;
     }
     .design-wrap,
     .cording-wrap {
         position: static;
+    }
+    /* .design-wrap {
+        top: 30%;
+    } */
+    .design-text,
+    .cording-text {
+        width: 274px;
+    }
+    .design-title,
+    .cording-title {
+        font-size: 34px;
+        text-align: start;
+        margin-top: 20%;
+    }
+
+    .design-tool,
+    .cording-tool {
+        padding: 10vw 0 10vw 0;
+    }
+
+    .accordion summary {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        margin: 5%;
+    }
+    .name {
+        font-size: 34px;
+        position: absolute;
+        margin-left: auto;
+        padding-left: 3%;
+        padding-bottom: 3%;
+    }
+    .number {
+        font-size: 14px;
+        position: relative;
+        bottom: 20px;
+    }
+
+    .strength-container {
+        padding-bottom: 5%;
+    }
+    .plus::before,
+    .plus::after {
+        width: 14px;
+        height: 1px;
+    }
+    .str-title h3 {
+        font-size: 53px;
     }
 }
