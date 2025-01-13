@@ -334,4 +334,7 @@ body {
     .img_mockups {
         width: 80%;
     }
+    .text-table .tool-words {
+        width: 100%;
+    }
 }
