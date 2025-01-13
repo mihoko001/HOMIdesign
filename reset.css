@@ -497,7 +497,7 @@ button {
 .prev:hover p,
 .next:hover p,
 .menu-list li a,
-.sub-menu li:hover {
+.sub-menu li a {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
