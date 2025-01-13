@@ -59,6 +59,16 @@ li {
     font-size: 1.17vw;
 } */
 /* ヘッダー */
+/* アニメーションで傾斜がついている文字列を水平に戻す*/
+span.smoothTextTrigger {
+    transition: 0.5s ease-in-out;
+    transform: translate3d(0, 10%, 0) skewY(12deg);
+    transform-origin: left;
+    display: block;
+}
+span.smoothTextTrigger.smoothTextAppear {
+    transform: translate3d(0, 0, 0) skewY(0);
+}
 .header-wrap {
     position: fixed;
     top: 0;
@@ -356,6 +366,15 @@ li {
     display: grid;
     place-items: center;
 }
+.copyright {
+    position: absolute;
+    left: 0;
+    width: 2%;
+    margin: 0 auto;
+    z-index: 100;
+    display: grid;
+}
+
 .right-block {
     position: fixed;
     right: 0;
@@ -424,10 +443,11 @@ li {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     color: #fff;
+
     font-size: 12px;
     letter-spacing: 0.2em;
     position: absolute;
-    left: 1%;
+
     bottom: 80px;
 
     margin: 0 calc(50% - 50vw);
@@ -440,7 +460,10 @@ button {
 }
 .follow:hover,
 .back-to-top:hover,
-.back-to-top:hover p {
+.back-to-top:hover p,
+.prev:hover p,
+.next:hover p,
+.menu-list:hover li {
     color: #999c99;
 }
 .back-yazirusi {
@@ -449,7 +472,10 @@ button {
 }
 .follow,
 .back-to-top,
-.back-to-top p {
+.back-to-top p,
+.prev:hover p,
+.next:hover p,
+.menu-list li a {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -528,12 +554,12 @@ button {
     .right-block {
         width: 4%;
     }
-    .scroll {
+    .left-block .scroll {
         color: #b3b7b3;
     }
 
     .copyright {
-        left: 1.5%;
+        left: 2%;
     }
     .logo-text {
         left: 7%;
@@ -677,6 +703,9 @@ button {
         }
         .header-wrap {
             height: 48px;
+        }
+        .copyright {
+            color: #999c99;
         }
     }
 }

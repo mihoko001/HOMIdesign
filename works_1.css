@@ -153,13 +153,6 @@
     place-items: center;
 }
 
-.sns {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    gap: 30px;
-}
-
 .right-block p {
     font-family: "cormorant-garamond", serif;
     font-weight: 300;

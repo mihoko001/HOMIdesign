@@ -149,16 +149,6 @@ span.smoothText {
     padding: 50px;
 }
 
-/* アニメーションで傾斜がついている文字列を水平に戻す*/
-span.smoothTextTrigger {
-    transition: 0.5s ease-in-out;
-    transform: translate3d(0, 10%, 0) skewY(12deg);
-    transform-origin: left;
-    display: block;
-}
-span.smoothTextTrigger.smoothTextAppear {
-    transform: translate3d(0, 0, 0) skewY(0);
-}
 .subtitle {
     position: absolute;
     top: 55%;
@@ -282,7 +272,7 @@ span.smoothTextTrigger.smoothTextAppear {
     font-size: 80px;
 }
 .concept-text {
-    padding: 11% 0 11% 0;
+    padding: 7% 0 10% 0;
     line-height: 1.75;
 
     /* width: 60%; */
@@ -493,7 +483,7 @@ span.smoothTextTrigger.smoothTextAppear {
 
 .works-btn {
     position: relative;
-    left: 20px;
+    left: 15%;
     padding-top: 10%;
     padding-bottom: 12%;
     width: 50%;
@@ -879,5 +869,8 @@ span.smoothTextTrigger.smoothTextAppear {
         left: 0;
         right: 0;
         margin: 0 auto;
+    }
+    #services p {
+        text-align: start;
     }
 }
