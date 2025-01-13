@@ -506,10 +506,7 @@ button {
 .back-to-top p {
     margin-top: 10px;
 }
-.back-to-top {
-    /* position: absolute;
-    z-index: 10000; */
-}
+
 /* フッター */
 .footer {
     position: fixed;

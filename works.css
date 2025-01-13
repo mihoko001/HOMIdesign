@@ -1,5 +1,15 @@
 @charset 'utf-8';
-
+body {
+    animation: loading 1s;
+}
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .kakuu {
     font-size: 12px;
 }

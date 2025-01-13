@@ -593,3 +593,11 @@ span.smoothTextTrigger.smoothTextAppear {
         font-size: 53px;
     }
 }
+@media screen and (max-width: 400px) {
+    .wayaku {
+        font-size: 12px;
+    }
+    .name {
+        font-size: 28px;
+    }
+}
