@@ -24,6 +24,23 @@ body {
     font-style: italic;
     /* letter-spacing: -0.06; */
 }
+.hum_banner {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
+.hum_banner p {
+    margin-left: 10%;
+}
+.banner_hum_pop img {
+    width: 576px;
+}
+.banner_hum_lux {
+    width: 402px;
+}
 .banner_mockups {
     width: 43vw;
     margin: 0 auto;
@@ -52,6 +69,7 @@ body {
 }
 .works-title {
     font-size: 1.688em;
+    line-height: 1.7;
 }
 .sub-span {
     font-size: 0.741em;
@@ -290,5 +308,30 @@ body {
         padding-top: 3%;
         padding-bottom: 7%;
         font-size: 18px;
+    }
+    .hum_banner {
+        flex-wrap: wrap;
+    }
+    .hum_banner p {
+        margin-left: 10%;
+    }
+    .banner_hum_pop img {
+        width: 290px;
+        padding-bottom: 10%;
+    }
+    .banner_hum_lux {
+        width: 250px;
+    }
+    .explain {
+        width: 71%;
+    }
+    .banner_mockups {
+        width: 73%;
+    }
+    .banner_trip {
+        width: 70%;
+    }
+    .img_mockups {
+        width: 80%;
     }
 }

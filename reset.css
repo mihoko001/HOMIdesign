@@ -366,7 +366,8 @@ span.smoothTextTrigger.smoothTextAppear {
     display: grid;
     place-items: center;
 }
-.copyright {
+.copyright,
+.copyright-body {
     position: absolute;
     left: 0;
     width: 3%;
@@ -454,6 +455,24 @@ span.smoothTextTrigger.smoothTextAppear {
     margin: 0 calc(50% - 50vw);
     height: 100vh;
 }
+
+.copyright-body {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    color: #001900;
+
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    position: absolute;
+
+    bottom: 80px;
+
+    margin: 0 calc(50% - 50vw);
+    height: 100vh;
+}
 button {
     background-color: #001900;
     cursor: pointer;
@@ -464,7 +483,8 @@ button {
 .back-to-top:hover p,
 .prev:hover p,
 .next:hover p,
-.menu-list li:hover {
+.menu-list li:hover,
+.sub-menu li:hover {
     color: #999c99;
 }
 .back-yazirusi {
@@ -476,7 +496,8 @@ button {
 .back-to-top p,
 .prev:hover p,
 .next:hover p,
-.menu-list li a {
+.menu-list li a,
+.sub-menu li:hover {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -562,7 +583,8 @@ button {
         color: #b3b7b3;
     }
 
-    .copyright {
+    .copyright,
+    .copyright-body {
         width: 4%;
     }
     .logo-text {
@@ -606,7 +628,21 @@ button {
     .openbtn span:nth-of-type(3) {
         top: 31px;
     }
+    @media screen and (max-width: 1000px) {
+        /*========= ボタンのためのCSS ===============*/
 
+        .openbtn span:nth-of-type(1) {
+            top: 14px;
+        }
+
+        .openbtn span:nth-of-type(2) {
+            top: 25px;
+        }
+
+        .openbtn span:nth-of-type(3) {
+            top: 36px;
+        }
+    }
     @media screen and (max-width: 767px) {
         p,
         a,
@@ -662,7 +698,8 @@ button {
         .right-block {
             width: 5%;
         }
-        .copyright {
+        .copyright,
+        .copyright-body {
             bottom: 50px;
         }
 
@@ -705,7 +742,8 @@ button {
         .header-wrap {
             height: 48px;
         }
-        .copyright {
+        .copyright,
+        .copyright-body {
             color: #999c99;
             width: 5%;
         }

@@ -480,6 +480,13 @@ span.smoothTextTrigger.smoothTextAppear {
         width: 50vw;
         height: 50vw;
     }
+    .skill-title {
+        font-size: 160px;
+        padding-top: 5%;
+    }
+    .img-right img {
+        top: 12%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -569,7 +576,7 @@ span.smoothTextTrigger.smoothTextAppear {
         font-size: 34px;
 
         padding-left: 3%;
-        padding-bottom: 3%;
+        padding-bottom: 1%;
     }
     .number {
         font-size: 14px;
@@ -577,9 +584,6 @@ span.smoothTextTrigger.smoothTextAppear {
         top: -20px;
     }
 
-    .strength-container {
-        padding-bottom: 5%;
-    }
     .plus::before,
     .plus::after {
         width: 14px;
