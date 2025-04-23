@@ -630,7 +630,99 @@ span.smoothText {
     transform: scale(0.8);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 2800px) {
+    .subtitle {
+        position: absolute;
+        top: 62%;
+        left: 20%;
+    }
+
+    .main h2 {
+        font-size: 4.5vw;
+    }
+    .homi-is {
+        bottom: -3%;
+        left: 8%;
+    }
+    .main-title {
+        top: -3%;
+    }
+    .main-flower {
+        width: 22vw;
+
+        right: 15vw;
+        bottom: -5%;
+    }
+
+    .main h1 {
+        font-size: 13vw;
+    }
+    .detail {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .sub-menu {
+        right: 7%;
+        bottom: 35%;
+    }
+    .sub-menu li {
+        font-size: 1.1vw;
+    }
+    .since h1 {
+        font-size: 14vw;
+
+        bottom: -5%;
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    .subtitle {
+        position: absolute;
+        top: 60%;
+        left: 14%;
+    }
+
+    .main h2 {
+        font-size: 7vw;
+    }
+    .homi-is {
+        bottom: 0;
+        left: 8%;
+    }
+
+    .main-flower {
+        width: 25vw;
+
+        right: 10vw;
+        bottom: 7%;
+    }
+
+    .main h1 {
+        font-size: 18vw;
+    }
+    .detail {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .sub-menu {
+        right: 5%;
+        bottom: 35%;
+    }
+    .sub-menu li {
+        font-size: 1.3vw;
+    }
+    .since h1 {
+        font-size: 18vw;
+
+        bottom: 0;
+        right: -2%;
+    }
+}
+
+@media screen and (max-width: 1800px) {
     .subtitle {
         position: absolute;
         top: 60%;
@@ -646,9 +738,59 @@ span.smoothText {
     }
 
     .main-flower {
-        width: 27vw;
+        width: 26vw;
 
         right: 10vw;
+        bottom: 9%;
+    }
+
+    .main h1 {
+        font-size: 18vw;
+    }
+    .detail {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .message p {
+        font-size: 1.6vw;
+    }
+    .sub-menu {
+        right: 5%;
+        bottom: 30%;
+    }
+    .sub-menu li {
+        font-size: 1.3vw;
+    }
+    .since h1 {
+        font-size: 18vw;
+
+        bottom: 0;
+        right: -2%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .subtitle {
+        position: absolute;
+        top: 60%;
+        left: 14%;
+    }
+
+    .main h2 {
+        font-size: 8vw;
+    }
+    .homi-is {
+        bottom: -5%;
+        left: 8%;
+    }
+
+    .message p {
+        font-size: 1.5vw;
+    }
+    .main-flower {
+        width: 28vw;
+
+        right: 12vw;
         bottom: 7%;
     }
 
@@ -747,6 +889,29 @@ span.smoothText {
     .img-right {
         right: -200px;
     }
+    .main-title {
+        left: -3%;
+    }
+    .subtitle {
+        left: 10%;
+    }
+    .homi-is {
+        bottom: 3%;
+    }
+    .sub-menu {
+        bottom: 32%;
+    }
+    .since h1 {
+        right: -12%;
+        bottom: 8%;
+    }
+    .main-flower {
+        bottom: 12%;
+    }
+    .concept-text {
+        position: relative;
+        bottom: 5%;
+    }
 }
 @media screen and (max-width: 767px) {
     .detail {
@@ -760,26 +925,29 @@ span.smoothText {
     }
     .main-title {
         position: absolute;
-        left: -23%;
+        left: -30px;
     }
     .main h2 {
         font-size: 38px;
         left: -25%;
     }
 
+    span.smoothText {
+        padding: 30px;
+    }
     .message p {
         font-size: 14px;
         color: #b3b7b3;
     }
     .homi-is {
-        bottom: 0%;
-        left: 8%;
+        bottom: 3%;
+        left: 4%;
     }
 
     .main-flower {
         width: 48vw;
 
-        right: -5vw;
+        right: -3vw;
         top: 22%;
     }
 
@@ -788,7 +956,7 @@ span.smoothText {
     }
 
     .sub-menu {
-        right: 5%;
+        right: 3%;
         bottom: 25%;
     }
     .sub-menu li {
@@ -798,7 +966,7 @@ span.smoothText {
         font-size: 28vw;
 
         top: 60%;
-        right: -25%;
+        right: -15%;
     }
 
     .concept-flower img {
